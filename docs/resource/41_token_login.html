@@ -1,0 +1,729 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>登录 Login · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="42_logout.html" />
+    
+    
+    <link rel="prev" href="40_account.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00_version.html">
+            
+                <a href="00_version.html">
+            
+                    
+                    修订记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="10_use_sdk.html">
+            
+                <a href="10_use_sdk.html">
+            
+                    
+                    SDK 使用方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="20_demo.html">
+            
+                <a href="20_demo.html">
+            
+                    
+                    Demo 代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="31_sdk_init.html">
+            
+                <a href="31_sdk_init.html">
+            
+                    
+                    SDK 初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="40_account.html">
+            
+                <a href="40_account.html">
+            
+                    
+                    帐号模块 Account
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="41_token_login.html">
+            
+                <a href="41_token_login.html">
+            
+                    
+                    登录 Login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="42_logout.html">
+            
+                <a href="42_logout.html">
+            
+                    
+                    登出 Logout
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="50_binder.html">
+            
+                <a href="50_binder.html">
+            
+                    
+                    配网模块 Binder
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="51_ble_status.html">
+            
+                <a href="51_ble_status.html">
+            
+                    
+                    蓝牙状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="52_ble_scan.html">
+            
+                <a href="52_ble_scan.html">
+            
+                    
+                    蓝牙扫描
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="53_ble_connect.html">
+            
+                <a href="53_ble_connect.html">
+            
+                    
+                    连接蓝牙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="54_ble_send_data.html">
+            
+                <a href="54_ble_send_data.html">
+            
+                    
+                    发送配网数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="60_device.html">
+            
+                <a href="60_device.html">
+            
+                    
+                    设备模块 Device
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="61_device_list.html">
+            
+                <a href="61_device_list.html">
+            
+                    
+                    设备列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="62_device_base_info.html">
+            
+                <a href="62_device_base_info.html">
+            
+                    
+                    设备基本信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="63_device_loaction.html">
+            
+                <a href="63_device_loaction.html">
+            
+                    
+                    设备地理位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="64_nick.html">
+            
+                <a href="64_nick.html">
+            
+                    
+                    设备昵称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="65_system_version.html">
+            
+                <a href="65_system_version.html">
+            
+                    
+                    设备系统版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="66_default_device.html">
+            
+                <a href="66_default_device.html">
+            
+                    
+                    默认设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="67_get_device_by_id.html">
+            
+                <a href="67_get_device_by_id.html">
+            
+                    
+                    获取单个设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="68_reset.html">
+            
+                <a href="68_reset.html">
+            
+                    
+                    恢复出厂设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="69_unbind.html">
+            
+                <a href="69_unbind.html">
+            
+                    
+                    设备解绑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="70_skill.html">
+            
+                <a href="70_skill.html">
+            
+                    
+                    技能模块 Skill
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="71_alarm.html">
+            
+                <a href="71_alarm.html">
+            
+                    
+                    闹钟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="72_remind.html">
+            
+                <a href="72_remind.html">
+            
+                    
+                    提醒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="73_homebase.html">
+            
+                <a href="73_homebase.html">
+            
+                    
+                    智能家居
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="80_webbridge.html">
+            
+                <a href="80_webbridge.html">
+            
+                    
+                    WebBridge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="81_use_webbridge.html">
+            
+                <a href="81_use_webbridge.html">
+            
+                    
+                    快速接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="90_vui.html">
+            
+                <a href="90_vui.html">
+            
+                    
+                    Vui 反馈 模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="91_card_list.html">
+            
+                <a href="91_card_list.html">
+            
+                    
+                    Card 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="93_asr.html">
+            
+                <a href="93_asr.html">
+            
+                    
+                    发送 ASR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="94_tts.html">
+            
+                <a href="94_tts.html">
+            
+                    
+                    发送 TTS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Y0_event.html">
+            
+                <a href="Y0_event.html">
+            
+                    
+                    消息 Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >登录 Login</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5E10;&#x53F7;&#x6A21;&#x5757;-account">&#x5E10;&#x53F7;&#x6A21;&#x5757; Account</h1>
+<h2 id="&#x6388;&#x6743;&#x767B;&#x9646;">&#x6388;&#x6743;&#x767B;&#x9646;</h2>
+<ul>
+<li>&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;&#x9700;&#x8981;&#x4F20;&#x5165;token&#x548C;&#x7528;&#x6237;id&#xFF0C;&#x518D;&#x76D1;&#x542C;&#x56DE;&#x8C03;</li>
+</ul>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td>token</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>&#x7528;&#x6237;&#x767B;&#x5F55;token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-swift"><span class="hljs-comment">// token &#x6709;&#x4E9B;&#x5E73;&#x53F0;&#x6CA1;&#x6709;</span>
+<span class="hljs-type">RokidMobileSDK</span>.account.login(userId: <span class="hljs-type">String</span>, token: <span class="hljs-type">String</span>, complete:((<span class="hljs-type">RKError</span>?) -&gt; <span class="hljs-type">Void</span>))
+</code></pre>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="40_account.html" class="navigation navigation-prev " aria-label="Previous page: 帐号模块 Account">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="42_logout.html" class="navigation navigation-next " aria-label="Next page: 登出 Logout">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"登录 Login","level":"1.6.1","depth":2,"next":{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]},"previous":{"title":"帐号模块 Account","level":"1.6","depth":1,"path":"resource/40_account.md","ref":"resource/40_account.md","articles":[{"title":"登录 Login","level":"1.6.1","depth":2,"path":"resource/41_token_login.md","ref":"resource/41_token_login.md","articles":[]},{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/41_token_login.md","mtime":"2018-03-05T08:14:26.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T08:49:21.603Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
