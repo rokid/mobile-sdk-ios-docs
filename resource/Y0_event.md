@@ -2,6 +2,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 NotificationCenter.rokid.addObserver()
 ```

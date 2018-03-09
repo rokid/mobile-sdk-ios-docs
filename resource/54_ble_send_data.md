@@ -9,9 +9,10 @@
 
 **示例代码**
 
+Swift:
+
 ```swift
 let binderData: DevicebinderData = DevicebinderData()
-binderData.userId("your ueserId")      //绑定的masterId（不能为空）
 binderData.wifiPwd("your wifiPwd")     //wifi密码（可以为空）
 binderData.wifiSsid("your wifiSsid")   //wifi名字（可以为空）
 binderData.wifiBssid("your wifiBssid") //wifi地址（可以为空）

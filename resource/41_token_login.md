@@ -11,6 +11,8 @@
 
 **示例代码：**
 
+Swift:
+
 ```swift
 // token 有些平台没有
 RokidMobileSDK.account.login(userId: String, token: String, complete:((RKError?) -> Void))

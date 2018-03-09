@@ -3,6 +3,8 @@
 
 **示例代码：**
 
+Swift:
+
 ```swift
 RokidMobileSDK.account.logout()
 ```

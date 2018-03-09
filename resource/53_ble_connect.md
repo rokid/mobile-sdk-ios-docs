@@ -11,6 +11,8 @@
 
 **示例代码**
 
+Swift:
+
 ```swift
 // name为RokidMobileSDK.BTDevice.name
 RokidMobileSDK.binder.connectBLEDevice(name: String, complete:(RKError?)->Void)

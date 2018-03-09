@@ -11,6 +11,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.device.updateNick(deviceId: String, newNick: String, completion: @escaping (_ error: RKError?) -> Void)
 ```

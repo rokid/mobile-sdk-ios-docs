@@ -617,6 +617,7 @@
 <h3 id="1&#x3001;&#x83B7;&#x53D6;&#x95F9;&#x949F;&#x5217;&#x8868;">1&#x3001;&#x83B7;&#x53D6;&#x95F9;&#x949F;&#x5217;&#x8868;</h3>
 <p>&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x7684;&#x95F9;&#x949F;&#x5217;&#x8868;</p>
 <p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
+<p>Swift:</p>
 <pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.skill?.alarm.getList(deviceId: <span class="hljs-type">String</span>,
                             completion: @escaping (error: <span class="hljs-type">RKError</span>?, alarms: [<span class="hljs-type">RKAlarm</span>]?) -&gt; <span class="hljs-type">Void</span>)
 </code></pre>
@@ -686,11 +687,25 @@
     ext&#x5B57;&#x6BB5;&#x662F;&#x624B;&#x673A;App&#x4E0E;&#x7CFB;&#x7EDF;&#x901A;&#x4FE1;&#x7279;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x6DFB;&#x52A0;&#x6216;&#x4FEE;&#x6539;&#x65F6;&#x4F20;&#x5165;&#xFF0C;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x65F6;&#x539F;&#x6837;&#x8FD4;&#x56DE;&#xFF0C;&#x4EE5;&#x4E0B;&#x5212;&#x7EBF;_&#x5F00;&#x59CB;&#x7684;key&#x662F;&#x9884;&#x5B9A;&#x4E49;key&#x3002;
     ext&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF1B;&#x56E0;&#x4E3A;&#x6682;&#x65F6;&#x6CA1;&#x6709;&#x5220;&#x9664;&#x5B57;&#x6BB5;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#x4FEE;&#x6539;&#x65F6;(SpecificTime)&#x9700;&#x8981;&#x4F20;&#x5165;&#x6240;&#x6709;&#x7684;key&#x548C;value&#x3002;
   &#x7CFB;&#x7EDF;&#x4E0D;&#x652F;&#x6301;&#x65F6;&#x95F4;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x95F9;&#x949F;&#xFF0C;&#x6240;&#x4EE5;&#x66F4;&#x65B0;&#x548C;&#x5220;&#x9664;&#x65F6;&#x4E0D;&#x4F1A;&#x6821;&#x9A8C;ext&#x662F;&#x5426;&#x5339;&#x914D;&#x3002;
+</font>
 
-| &#x540D;&#x79F0; | &#x7C7B;&#x578B; | &#x63CF;&#x8FF0; |
-| --- | --- | --- |
-| _ringtone | string | &#x95F9;&#x949F;&#x94C3;&#x58F0;&#x5730;&#x5740;&#xFF0C;&#x4F1A;&#x8986;&#x76D6;&#x5168;&#x5C40;&#x7684;&#x95F9;&#x949F;&#x4E3B;&#x9898; |
-
+<table>
+<thead>
+<tr>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_ringtone</td>
+<td>string</td>
+<td>&#x95F9;&#x949F;&#x94C3;&#x58F0;&#x5730;&#x5740;&#xFF0C;&#x4F1A;&#x8986;&#x76D6;&#x5168;&#x5C40;&#x7684;&#x95F9;&#x949F;&#x4E3B;&#x9898;</td>
+</tr>
+</tbody>
+</table>
+<font color="red">
 &#x7B2C;&#x4E09;&#x65B9;&#x9700;&#x6C42;&#x53EF;&#x4EE5;&#x7531;&#x4ED6;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#xFF0C;&#x6BD4;&#x5982;&#x5C0F;&#x96C5;&#x5C0F;&#x96C5;&#x7684;&#x6807;&#x7B7E;&#x9700;&#x6C42;
 </font>
 
@@ -698,6 +713,7 @@
 <h3 id="2&#x3001;&#x65B0;&#x5EFA;&#x95F9;&#x949F;">2&#x3001;&#x65B0;&#x5EFA;&#x95F9;&#x949F;</h3>
 <p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x95F9;&#x949F;</p>
 <p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
+<p>Swift:</p>
 <pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.skill?.alarm.create(deviceId: <span class="hljs-type">String</span>, alarm: <span class="hljs-type">RKAlarm</span>)
 </code></pre>
 <p>repeatType &#x89E3;&#x91CA;&#xFF1A;</p>
@@ -716,12 +732,14 @@ RKAlarmRepeatModeEverySunday : &#x6BCF;&#x5468;&#x65E5;
 <h3 id="3&#x3001;&#x5220;&#x9664;&#x95F9;&#x949F;">3&#x3001;&#x5220;&#x9664;&#x95F9;&#x949F;</h3>
 <p>&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x95F9;&#x949F;</p>
 <p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
+<p>Swift:</p>
 <pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.skill?.alarm.delete(deviceId: <span class="hljs-type">String</span>, alarm: <span class="hljs-type">RKAlarm</span>)
 </code></pre>
 <hr>
 <h3 id="4&#x3001;&#x66F4;&#x65B0;&#x95F9;&#x949F;">4&#x3001;&#x66F4;&#x65B0;&#x95F9;&#x949F;</h3>
 <p>&#x66F4;&#x65B0;&#x4E00;&#x4E2A;&#x95F9;&#x949F;</p>
 <p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
+<p>Swift:</p>
 <pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.skill?.alarm.update(deviceId: <span class="hljs-type">String</span>, alarm: <span class="hljs-type">RKAlarm</span>, to: <span class="hljs-type">RKAlarm</span>)
 </code></pre>
 <hr>
@@ -768,7 +786,7 @@ RKAlarmRepeatModeEverySunday : &#x6BCF;&#x5468;&#x65E5;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"闹钟","level":"1.9.1","depth":2,"next":{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},"previous":{"title":"技能模块 Skill","level":"1.9","depth":1,"path":"resource/70_skill.md","ref":"resource/70_skill.md","articles":[{"title":"闹钟","level":"1.9.1","depth":2,"path":"resource/71_alarm.md","ref":"resource/71_alarm.md","articles":[]},{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},{"title":"智能家居","level":"1.9.3","depth":2,"path":"resource/73_homebase.md","ref":"resource/73_homebase.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/71_alarm.md","mtime":"2018-03-05T08:35:41.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T08:49:21.603Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"闹钟","level":"1.9.1","depth":2,"next":{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},"previous":{"title":"技能模块 Skill","level":"1.9","depth":1,"path":"resource/70_skill.md","ref":"resource/70_skill.md","articles":[{"title":"闹钟","level":"1.9.1","depth":2,"path":"resource/71_alarm.md","ref":"resource/71_alarm.md","articles":[]},{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},{"title":"智能家居","level":"1.9.3","depth":2,"path":"resource/73_homebase.md","ref":"resource/73_homebase.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/71_alarm.md","mtime":"2018-03-09T07:59:54.555Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-09T08:00:37.996Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

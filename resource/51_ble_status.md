@@ -3,6 +3,8 @@
 
 **示例代码**
 
+Swift:
+
 ```swift
 RokidMobileSDK.binder.getBLEStatus()
 ```
@@ -18,6 +20,8 @@ RokidMobileSDK.binder.getBLEStatus()
 | statusChange | CBCentralManagerState) -> Void | 是 | 状态改变回调 |
 
 **示例代码**
+
+Swift:
 
 ```swift
 RokidMobileSDK.binder.onBLEStatusChange(statusChange: @escaping (CBCentralManagerState) -> Void)

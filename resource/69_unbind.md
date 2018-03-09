@@ -10,6 +10,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.device.unbindDevice(deviceId: String, completion: @escaping (_ error: RKError?) -> Void)
 ```

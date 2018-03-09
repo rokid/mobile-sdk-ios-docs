@@ -11,6 +11,8 @@
 
 **示例代码**
 
+Swift:
+
 ```swift
 // 设备信息 icon、name、alive
 RokidMobileSDK.device.queryDeviceList(complete:(RKError?,[RKDevice])->Void)

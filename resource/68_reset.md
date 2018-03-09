@@ -9,6 +9,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.device.resetDevice(deviceId: String) -> Bool
 ```

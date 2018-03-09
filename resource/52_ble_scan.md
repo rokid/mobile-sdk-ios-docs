@@ -9,6 +9,8 @@
 
 **示例代码**
 
+Swift:
+
 ```swift
 RokidMobileSDK.binder.startBLEScan(type: String, onNewDeviceCallback: (BTDevice)->Void) ->RKError?
 ```
@@ -18,6 +20,8 @@ RokidMobileSDK.binder.startBLEScan(type: String, onNewDeviceCallback: (BTDevice)
 ## 停止蓝牙扫描
 
 **示例代码**：
+
+Swift:
 
 ```swift
 RokidMobileSDK.binder.stopBLEScan()

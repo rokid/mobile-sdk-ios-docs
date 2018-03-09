@@ -2,6 +2,8 @@
 ## 快速接入
 SDK 提供了 快速接入方法 供开发者集成，请安装下面 Demo 代码使用即可，具体 Native UI View 组件可根据APP业务需求进行实现。
 
+Swift:
+
 ```swift
 
 class WebviewViewController: UIViewController {
@@ -13,10 +15,25 @@ class WebviewViewController: UIViewController {
         super.viewDidLoad()
         
         self.webbridge = RKWebBridge.injectWebBridge(to: self.webView!)
+        self.webbridge?.setPhoneDelegate(delegate: self)
         self.webbridge?.setAppDelegate(delegate: self)
         self.webbridge?.setViewDelegate(delegate: self)
     }
     
+}
+
+extension WebviewViewController: RKBridgeModulePhoneDelegate {
+    // 用户手指按下
+    func touchDown() {
+    }
+    
+    // 用户手指移动
+    func touchMove() {
+    }
+    
+    // 用户手指抬起
+    func touchUp() {
+    }
 }
 
 extension WebviewViewController: RKBridgeModuleAppDelegate  {

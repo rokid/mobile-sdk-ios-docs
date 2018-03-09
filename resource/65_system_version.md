@@ -10,6 +10,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.device.getVersion(deviceId: String, completion: @escaping (_ error: Error?, _ versionInfo: RKDeviceVersionInfo?) -> Void )
 ```
@@ -25,6 +27,8 @@ RokidMobileSDK.device.getVersion(deviceId: String, completion: @escaping (_ erro
 | deviceId | String | 是 | 设备Id |
 
 **接口定义**
+
+Swift:
 
 ```swift
 RokidMobileSDK.device.startSystemUpdate(deviceId: String) -> Bool

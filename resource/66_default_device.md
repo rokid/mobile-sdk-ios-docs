@@ -9,6 +9,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.device.setCurrentDevice(device: RKDevice)
 ```
@@ -23,6 +25,8 @@ RokidMobileSDK.device.setCurrentDevice(device: RKDevice)
 | ------ | ----- | ----- | ----- |
 
 **接口定义**
+
+Swift:
 
 ```swift
 RokidMobileSDK.device.getCurrentDevice() -> RKDevice?

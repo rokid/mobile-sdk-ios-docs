@@ -3,6 +3,8 @@
 ### 1、获取提醒列表
 请求获取设备上的提醒列表：
 
+Swift:
+
 ```swift
 RokidMobileSDK.skill?.remind.getList(deviceId: String,
                            completion: @escaping (_ error: RKError?, _ reminds: [RKRemind]?) -> Void)
@@ -24,6 +26,8 @@ RKRemind 字段说明：
 
 ### 2、删除提醒
 删除一个提醒：
+
+Swift:
 
 ```swift
 RokidMobileSDK.skill?.remind.delete(deviceId: String, remind: RKRemind)

@@ -12,6 +12,8 @@
 
 **示例代码：**
 
+Swift:
+
 ```swift
 // complete: 初始化结果，成功success = true, 失败success = false
 RokidMobileSDK.shared.initSDK(appKey: String,
@@ -26,6 +28,8 @@ RokidMobileSDK.shared.initSDK(appKey: String,
 
 **示例代码：**
 
+Swift:
+
 ```swift
 RokidMobileSDK.debug()
 ```
@@ -37,6 +41,8 @@ RokidMobileSDK.debug()
 <font color="red">此API 未启用</font>
 
 **示例代码：**
+
+Swift:
 
 ```swift
 // Log默认关闭

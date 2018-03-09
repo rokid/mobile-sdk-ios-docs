@@ -11,6 +11,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.device.getBasicInfo(deviceId: String) -> [String: Any]?
 ```

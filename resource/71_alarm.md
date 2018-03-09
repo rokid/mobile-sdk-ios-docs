@@ -5,6 +5,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.skill?.alarm.getList(deviceId: String,
                             completion: @escaping (error: RKError?, alarms: [RKAlarm]?) -> Void)
@@ -28,11 +30,13 @@ RKAlarm 字段说明：
     ext字段是手机App与系统通信特有的字段，添加或修改时传入，获取列表时原样返回，以下划线_开始的key是预定义key。
     ext字段可以为空；因为暂时没有删除字段的接口，所以修改时(SpecificTime)需要传入所有的key和value。
   系统不支持时间完全相同的闹钟，所以更新和删除时不会校验ext是否匹配。
-  
+</font>
+
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
 | _ringtone | string | 闹钟铃声地址，会覆盖全局的闹钟主题 |
     
+<font color='red'>
 第三方需求可以由他们自定义字段，比如小雅小雅的标签需求
 </font>
 
@@ -42,6 +46,8 @@ RKAlarm 字段说明：
 新建一个闹钟
 
 **接口定义**
+
+Swift:
 
 ```swift
 RokidMobileSDK.skill?.alarm.create(deviceId: String, alarm: RKAlarm)
@@ -70,6 +76,8 @@ RKAlarmRepeatModeEverySunday : 每周日
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.skill?.alarm.delete(deviceId: String, alarm: RKAlarm)
 ```
@@ -81,6 +89,8 @@ RokidMobileSDK.skill?.alarm.delete(deviceId: String, alarm: RKAlarm)
 更新一个闹钟
 
 **接口定义**
+
+Swift:
 
 ```swift
 RokidMobileSDK.skill?.alarm.update(deviceId: String, alarm: RKAlarm, to: RKAlarm)

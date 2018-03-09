@@ -10,6 +10,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.device.getLocation(deviceId: String, completion: @escaping (_ error: RKError?, _ location: Location?) -> Void)
 ```
@@ -27,6 +29,8 @@ RokidMobileSDK.device.getLocation(deviceId: String, completion: @escaping (_ err
 | completion |   | 是 | 结果回调 |
 
 **接口定义**
+
+Swift:
 
 ```swift
 RokidMobileSDK.device.updateLocation(deviceId: String, location: Location, completion: @escaping (_ error: RKError?) -> Void)

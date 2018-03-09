@@ -11,6 +11,8 @@
 
 **接口定义**
 
+Swift:
+
 ```swift
 RokidMobileSDK.home.sendAsr(asr: String, to device: RKDevice)
 ```
