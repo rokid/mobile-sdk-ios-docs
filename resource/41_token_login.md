@@ -18,5 +18,17 @@ Swift:
 RokidMobileSDK.account.login(userId: String, token: String, complete:((RKError?) -> Void))
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.account tokenLoginWithUserId:@"xxx" token:@"xxx" completion:^(RKError * error) {
+        if (error) {
+            // ....
+        }
+        
+        //...
+    }];
+```
+
 ---
 

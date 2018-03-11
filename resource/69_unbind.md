@@ -16,6 +16,14 @@ Swift:
 RokidMobileSDK.device.unbindDevice(deviceId: String, completion: @escaping (_ error: RKError?) -> Void)
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.device unbindDeviceWithDeviceId:self.device.id completion:^(RKError * error) {
+    // ...
+}];
+```
+
 ---
 
 

@@ -18,6 +18,17 @@ Swift:
 RokidMobileSDK.device.queryDeviceList(complete:(RKError?,[RKDevice])->Void)
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.device queryDeviceListWithCompletion:^(RKError * error, NSArray<RKDevice *> * device_list) {
+        NSLog(@"device_list = %@", device_list);
+        // ...
+}];
+```
+
+RKDevice 字段解释：
+
 ```json
 [
     {

@@ -15,16 +15,30 @@ Swift:
 RokidMobileSDK.binder.startBLEScan(type: String, onNewDeviceCallback: (BTDevice)->Void) ->RKError?
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.binder startBLEScanWithType:@"Rokid-Pebble-" onDeviceChange:^(NSArray<RKBLEDevice *> * devices) {
+    //...
+}];
+```
+
 ---
 
 ## 停止蓝牙扫描
 
-**示例代码**：
+**示例代码**
 
 Swift:
 
 ```swift
 RokidMobileSDK.binder.stopBLEScan()
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.binder stopBLEScan]
 ```
 
 ---

@@ -12,7 +12,13 @@
 Swift:
 
 ```swift
-RokidMobileSDK.device.resetDevice(deviceId: String) -> Bool
+let isSucceed = RokidMobileSDK.device.resetDevice(deviceId: String)
+```
+
+Objc:
+
+```objc
+BOOL isSucceed = [RokidMobileSDK.device resetDeviceWithDeviceId:self.device.id];
 ```
 
 ---

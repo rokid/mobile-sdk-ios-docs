@@ -15,6 +15,12 @@ Swift:
 RokidMobileSDK.device.setCurrentDevice(device: RKDevice)
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.device setCurrentDeviceWithDevice:self.device];
+```
+
 ---
 
 ## 2、获取当前设备(本地缓存)
@@ -30,6 +36,12 @@ Swift:
 
 ```swift
 RokidMobileSDK.device.getCurrentDevice() -> RKDevice?
+```
+
+Objc:
+
+```objc
+RKDevice * device = [RokidMobileSDK.device getCurrentDevice];
 ```
 
 ---

@@ -9,5 +9,11 @@ Swift:
 RokidMobileSDK.account.logout()
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.account logout];
+```
+
 ---
 

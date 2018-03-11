@@ -14,13 +14,33 @@
 Swift:
 
 ```swift
-RokidMobileSDK.home.getCardList(maxDbId: Int, completion: @escaping (_ error: RKError?, _ cardList: [RKCard]?) -> Void) -> Void
+RokidMobileSDK.vui.getCardList(maxDbId: Int, completion: @escaping (_ error: RKError?, _ cardList: [RKCard]?) -> Void) -> Void
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.vui getCardListWithMaxDbId:0 completion:^(RKError * error, NSArray<RKCard *> * cardArray) {
+    for (RKCard *card in cardArray) {
+        NSLog(@"msg = %@", card.msgText);
+    }
+}];
 ```
 
 Swift:
 
 ```swift
-RokidMobileSDK.home.getCardList(maxDbId: Int, pageSize: Int = 20, completion: @escaping (_ error: RKError?, _ cardList: [RKCard]?) -> Void) -> Void
+RokidMobileSDK.vui.getCardList(maxDbId: Int, pageSize: Int = 20, completion: @escaping (_ error: RKError?, _ cardList: [RKCard]?) -> Void) -> Void
+```
+
+Objc
+
+```objc
+[RokidMobileSDK.vui getCardListWithMaxDbId:0 pageSize:20 completion:^(RKError * error, NSArray<RKCard *> * cardArray) {
+    for (RKCard *card in cardArray) {
+        NSLog(@"msg = %@", card.msgText);
+    }
+}];
 ```
 
 ---

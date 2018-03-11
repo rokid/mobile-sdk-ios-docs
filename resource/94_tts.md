@@ -14,7 +14,13 @@
 Swift:
  
 ```swift
-RokidMobileSDK.home.sendTts(tts: String, to device: RKDevice)
+RokidMobileSDK.vui.sendTts(tts: String, to device: RKDevice)
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.vui sendTtsWithTts: @"XXX" to: self.device];
 ```
 
 ---

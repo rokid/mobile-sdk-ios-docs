@@ -21,6 +21,22 @@ RokidMobileSDK.shared.initSDK(appKey: String,
                               escaping complete:(success: Bool) -> Void)
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.shared initSDKWithAppKey:"xxx"
+                                   appSecret:"xxx"
+                                   accessKey:"xxx"
+                                  completion:^(RKError * error) {
+        NSLog(@"[SDK init] result = %@", error);
+        
+        // SDK init 完成
+        if (!error) {
+            NSLog(@"SDK init success");
+        };
+    }];
+```
+
 ---
 
 ## 2、Debug 模式
@@ -31,7 +47,13 @@ RokidMobileSDK.shared.initSDK(appKey: String,
 Swift:
 
 ```swift
-RokidMobileSDK.debug()
+RokidMobileSDK.shared.debug = true
+```
+
+Objc:
+
+```objc
+RokidMobileSDK.shared.debug = true;
 ```
 
 ---

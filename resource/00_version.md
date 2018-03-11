@@ -1,5 +1,10 @@
 #  版本更新详情
 
+* v1.0.4
+    
+    [修改] 统一 SDK 前缀。<br>
+    [修改] home -> vui
+
 * v1.0.3
     
     [新增] WebBridge 的 PhoneDelegate H5 touch 事件。

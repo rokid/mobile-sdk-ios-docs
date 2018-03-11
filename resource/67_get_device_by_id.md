@@ -12,7 +12,13 @@
 Swift:
 
 ```swift
-RokidMobileSDK.device.getDevice(deviceId: String) -> RKDevice?
+let device = RokidMobileSDK.device.getDevice(deviceId: String) -> RKDevice?
+```
+
+Objc:
+
+```objc
+RKDevice * device = [RokidMobileSDK.device getDeviceWithDeviceId:self.device.id];
 ```
 
 ---

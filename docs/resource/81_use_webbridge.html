@@ -703,6 +703,79 @@
 
 }
 </code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">WebviewViewController</span> () &lt;<span class="hljs-title">RKBridgeModuleViewDelegate</span>, <span class="hljs-title">RKBridgeModuleAppDelegate</span>, <span class="hljs-title">RKBridgeModulePhoneDelegate</span>&gt;</span>
+
+<span class="hljs-keyword">@property</span>(<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) RKWebBridge * rkWebBridge ;
+
+- (<span class="hljs-keyword">void</span>)viewDidLoad {
+    <span class="hljs-keyword">self</span>.rkWebBridge = [RKWebBridge injectWebBridgeTo:<span class="hljs-keyword">self</span>.webView];
+
+    [<span class="hljs-keyword">self</span>.rkWebBridge setPhoneDelegateWithDelegate:<span class="hljs-keyword">self</span>];
+    [<span class="hljs-keyword">self</span>.rkWebBridge setAppDelegateWithDelegate:<span class="hljs-keyword">self</span>];
+    [<span class="hljs-keyword">self</span>.rkWebBridge setViewDelegateWithDelegate:<span class="hljs-keyword">self</span>];
+}
+
+<span class="hljs-comment">// &#x7528;&#x6237;&#x624B;&#x6307;&#x6309;&#x4E0B;</span>
+- (<span class="hljs-keyword">void</span>)touchDown {
+}
+
+<span class="hljs-comment">// &#x7528;&#x6237;&#x624B;&#x6307;&#x79FB;&#x52A8;</span>
+- (<span class="hljs-keyword">void</span>)touchMove {
+}
+
+<span class="hljs-comment">// &#x7528;&#x6237;&#x624B;&#x6307;&#x62AC;&#x8D77;</span>
+- (<span class="hljs-keyword">void</span>)touchUp {
+}
+
+<span class="hljs-comment">// &#x5173;&#x95ED;&#x5F53;&#x524D;&#x9875;&#x9762;</span>
+- (<span class="hljs-keyword">void</span>)close {
+}
+
+<span class="hljs-comment">// &#x5728;&#x5F53;&#x524D;&#x7684; webview &#xFF0C;&#x6253;&#x5F00;Url</span>
+- (<span class="hljs-keyword">void</span>)openWithTitle:(<span class="hljs-built_in">NSString</span> * _Nonnull)title urlStr:(<span class="hljs-built_in">NSString</span> * _Nonnull)urlStr {
+}
+
+<span class="hljs-comment">// &#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684; ViewController &#x4E2D;&#x6253;&#x5F00;Url</span>
+- (<span class="hljs-keyword">void</span>)openNewWebViewWithTitle:(<span class="hljs-built_in">NSString</span> * _Nonnull)title urlStr:(<span class="hljs-built_in">NSString</span> * _Nonnull)urlStr {
+}
+
+<span class="hljs-comment">// &#x4F7F;&#x7528;&#x5916;&#x90E8;&#x6D4F;&#x89C8;&#x5668; &#x6253;&#x5F00;Url</span>
+- (<span class="hljs-keyword">void</span>)openExternalWithUrlStr:(<span class="hljs-built_in">NSString</span> * _Nonnull)urlStr {
+}
+
+<span class="hljs-comment">// &#x663E;&#x793A; Toast</span>
+- (<span class="hljs-keyword">void</span>)showToastWithMessage:(<span class="hljs-built_in">NSString</span> * _Nonnull)message {
+}
+
+<span class="hljs-comment">// &#x663E;&#x793A; &#x52A0;&#x8F7D;&#x4E2D;UI&#x7EC4;&#x4EF6;</span>
+- (<span class="hljs-keyword">void</span>)showLoadingWithMessage:(<span class="hljs-built_in">NSString</span> * _Nonnull)message {
+}
+
+<span class="hljs-comment">// &#x9690;&#x85CF; &#x52A0;&#x8F7D;&#x4E2D;UI&#x7EC4;&#x4EF6; </span>
+- (<span class="hljs-keyword">void</span>)hideLoading {
+}
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E; &#x6807;&#x9898;&#x680F;&#x6807;&#x9898;</span>
+- (<span class="hljs-keyword">void</span>)setNavigationBarTitleWithTitle:(<span class="hljs-built_in">NSString</span> * _Nonnull)title {
+}
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E; &#x6807;&#x9898;&#x680F;&#x98CE;&#x683C;</span>
+- (<span class="hljs-keyword">void</span>)setNavigationBarStyleWithStyle:(<span class="hljs-built_in">NSString</span> * _Nonnull)style {
+}
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E; &#x6807;&#x9898;&#x680F; &#x53F3;&#x4FA7;&#x6309;&#x94AE;</span>
+- (<span class="hljs-keyword">void</span>)setNavigationBarRightWithButton:(<span class="hljs-built_in">NSDictionary</span>&lt;<span class="hljs-built_in">NSString</span> *, <span class="hljs-keyword">id</span>&gt; * _Nonnull)button {
+}
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E; &#x6807;&#x9898;&#x680F; &#x53F3;&#x4FA7;&#x6309;&#x94AE;&#x5C0F;&#x7EA2;&#x70B9;&#x72B6;&#x6001;</span>
+- (<span class="hljs-keyword">void</span>)setNavigationBarRightDotStateWithState:(<span class="hljs-built_in">BOOL</span>)state {
+}
+
+<span class="hljs-comment">// &#x663E;&#x793A; &#x5F02;&#x5E38;UI&#x7EC4;&#x4EF6;</span>
+- (<span class="hljs-keyword">void</span>)errorViewWithState:(<span class="hljs-built_in">BOOL</span>)state retryUrl:(<span class="hljs-built_in">NSString</span> * _Nonnull)retryUrl {
+}
+</code></pre>
 <p>&#xFF08;1&#xFF09;&#x6807;&#x9898;&#x680F;&#x98CE;&#x683C;&#xFF1A;
 &#x8BF7;&#x6807;&#x9898;&#x680F;&#x98CE;&#x683C; &#x6839;&#x636E;&#x4E1A;&#x52A1;&#x9700;&#x6C42;&#x8BBE;&#x7F6E;&#x3002;</p>
 <p>&#xFF08;2&#xFF09;&#x6807;&#x9898;&#x680F; &#x53F3;&#x4FA7; RightButton &#x53C2;&#x6570;&#x89E3;&#x91CA;&#xFF1A;</p>
@@ -786,7 +859,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"快速接入","level":"1.10.1","depth":2,"next":{"title":"Vui 反馈 模块","level":"1.11","depth":1,"path":"resource/90_vui.md","ref":"resource/90_vui.md","articles":[{"title":"Card 列表","level":"1.11.1","depth":2,"path":"resource/91_card_list.md","ref":"resource/91_card_list.md","articles":[]},{"title":"发送 ASR","level":"1.11.2","depth":2,"path":"resource/93_asr.md","ref":"resource/93_asr.md","articles":[]},{"title":"发送 TTS","level":"1.11.3","depth":2,"path":"resource/94_tts.md","ref":"resource/94_tts.md","articles":[]}]},"previous":{"title":"WebBridge","level":"1.10","depth":1,"path":"resource/80_webbridge.md","ref":"resource/80_webbridge.md","articles":[{"title":"快速接入","level":"1.10.1","depth":2,"path":"resource/81_use_webbridge.md","ref":"resource/81_use_webbridge.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/81_use_webbridge.md","mtime":"2018-03-09T08:00:06.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-09T08:00:37.996Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"快速接入","level":"1.10.1","depth":2,"next":{"title":"Vui 反馈 模块","level":"1.11","depth":1,"path":"resource/90_vui.md","ref":"resource/90_vui.md","articles":[{"title":"Card 列表","level":"1.11.1","depth":2,"path":"resource/91_card_list.md","ref":"resource/91_card_list.md","articles":[]},{"title":"发送 ASR","level":"1.11.2","depth":2,"path":"resource/93_asr.md","ref":"resource/93_asr.md","articles":[]},{"title":"发送 TTS","level":"1.11.3","depth":2,"path":"resource/94_tts.md","ref":"resource/94_tts.md","articles":[]}]},"previous":{"title":"WebBridge","level":"1.10","depth":1,"path":"resource/80_webbridge.md","ref":"resource/80_webbridge.md","articles":[{"title":"快速接入","level":"1.10.1","depth":2,"path":"resource/81_use_webbridge.md","ref":"resource/81_use_webbridge.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/81_use_webbridge.md","mtime":"2018-03-11T08:35:27.892Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:39:18.499Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

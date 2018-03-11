@@ -16,6 +16,14 @@ Swift:
 RokidMobileSDK.device.getVersion(deviceId: String, completion: @escaping (_ error: Error?, _ versionInfo: RKDeviceVersionInfo?) -> Void )
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.device getVersionWithDeviceId:self.device.id completion:^(NSError * error, SDKDeviceVersionInfo * versionInfo) {
+    // ...
+}];
+```
+
 ---
 
 ## 2、开始系统升级
@@ -31,8 +39,13 @@ RokidMobileSDK.device.getVersion(deviceId: String, completion: @escaping (_ erro
 Swift:
 
 ```swift
-RokidMobileSDK.device.startSystemUpdate(deviceId: String) -> Bool
+let result = RokidMobileSDK.device.startSystemUpdate(deviceId: String)
 ```
 
+Objc:
+
+```objc
+BOOL result = [RokidMobileSDK.device startSystemUpdateWithDeviceId:self.device.id];
+```
 ---
 

@@ -12,12 +12,15 @@
 Swift:
 
 ```swift
-let binderData: DevicebinderData = DevicebinderData()
-binderData.wifiPwd("your wifiPwd")     //wifi密码（可以为空）
-binderData.wifiSsid("your wifiSsid")   //wifi名字（可以为空）
-binderData.wifiBssid("your wifiBssid") //wifi地址（可以为空）
+RokidMobileSDK.binder?.sendBLEBindWifi(device: RKBLEDevice, ssid: String, password, bssid, completion)
+```
 
-RokidMobileSDK.binder.sendBLEBinderData(binderData: DevicebinderData, complete: (RKError?)->Void)
+Objc:
+
+```objc
+[RokidMobileSDK.binder sendBLEBindWifiWithDevice:device ssid:@"xxx" password:@"xxx" bssid:@"xxx" completion:^(RKError * error) {
+    // ...
+}];
 ```
 
 ---

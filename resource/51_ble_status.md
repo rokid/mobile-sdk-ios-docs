@@ -9,6 +9,12 @@ Swift:
 RokidMobileSDK.binder.getBLEStatus()
 ```
 
+Objc:
+
+```objc
+CBCentralManagerState state = [RokidMobileSDK.binder getBLEStatus];
+```
+
 ---
 
 ## 2、监听蓝牙状态改变
@@ -25,6 +31,14 @@ Swift:
 
 ```swift
 RokidMobileSDK.binder.onBLEStatusChange(statusChange: @escaping (CBCentralManagerState) -> Void)
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.binder onBLEStatusChangeWithStatusChange:^(CBCentralManagerState state) {
+    //...
+}];
 ```
 
 ---

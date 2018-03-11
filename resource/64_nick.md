@@ -17,5 +17,13 @@ Swift:
 RokidMobileSDK.device.updateNick(deviceId: String, newNick: String, completion: @escaping (_ error: RKError?) -> Void)
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.device updateNickWithDeviceId:self.device.id newNick:@"XXX" completion:^(RKError * error) {
+    // ...
+}];
+```
+
 ---
 

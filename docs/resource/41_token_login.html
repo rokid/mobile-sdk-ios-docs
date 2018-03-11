@@ -647,6 +647,15 @@
 <pre><code class="lang-swift"><span class="hljs-comment">// token &#x6709;&#x4E9B;&#x5E73;&#x53F0;&#x6CA1;&#x6709;</span>
 <span class="hljs-type">RokidMobileSDK</span>.account.login(userId: <span class="hljs-type">String</span>, token: <span class="hljs-type">String</span>, complete:((<span class="hljs-type">RKError</span>?) -&gt; <span class="hljs-type">Void</span>))
 </code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc">[RokidMobileSDK.account tokenLoginWithUserId:<span class="hljs-string">@&quot;xxx&quot;</span> token:<span class="hljs-string">@&quot;xxx&quot;</span> completion:^(RKError * error) {
+        <span class="hljs-keyword">if</span> (error) {
+            <span class="hljs-comment">// ....</span>
+        }
+
+        <span class="hljs-comment">//...</span>
+    }];
+</code></pre>
 <hr>
 
                                 
@@ -691,7 +700,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"登录 Login","level":"1.6.1","depth":2,"next":{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]},"previous":{"title":"帐号模块 Account","level":"1.6","depth":1,"path":"resource/40_account.md","ref":"resource/40_account.md","articles":[{"title":"登录 Login","level":"1.6.1","depth":2,"path":"resource/41_token_login.md","ref":"resource/41_token_login.md","articles":[]},{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/41_token_login.md","mtime":"2018-03-09T07:58:40.623Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-09T08:00:37.996Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"登录 Login","level":"1.6.1","depth":2,"next":{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]},"previous":{"title":"帐号模块 Account","level":"1.6","depth":1,"path":"resource/40_account.md","ref":"resource/40_account.md","articles":[{"title":"登录 Login","level":"1.6.1","depth":2,"path":"resource/41_token_login.md","ref":"resource/41_token_login.md","articles":[]},{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/41_token_login.md","mtime":"2018-03-11T08:00:58.072Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:39:18.499Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -9,10 +9,18 @@ Swift:
 
 ```swift
 RokidMobileSDK.skill?.alarm.getList(deviceId: String,
-                            completion: @escaping (error: RKError?, alarms: [RKAlarm]?) -> Void)
+                            completion: @escaping (error: RKError?, alarms: [SDKAlarm]?) -> Void)
 ```
 
-RKAlarm 字段说明：
+Objc:
+
+```objc
+[RokidMobileSDK.skill.alarm getListWithDeviceId:self.device.id  completion:^(RKError * error   , NSArray<SDKAlarm *> * alarmArr) {
+    // ...
+}];
+```
+
+SDKAlarm 字段说明：
 
 | 参数 | 类型 | 必要？ | 说明 |
 | --- | --- | --- | --- |
@@ -50,23 +58,33 @@ RKAlarm 字段说明：
 Swift:
 
 ```swift
-RokidMobileSDK.skill?.alarm.create(deviceId: String, alarm: RKAlarm)
+RokidMobileSDK.skill?.alarm.create(deviceId: String, alarm: SDKAlarm)
+```
+
+Objc:
+
+```objc
+SDKAlarm * alarm = [SDKAlarm init];
+alarm.year = 2018;
+// ...
+
+[RokidMobileSDK.skill.alarm createWithDeviceId:@"xxx" alarm: alarm];
 ```
 
 repeatType 解释：
 
 ```
-RKAlarmRepeatModeOnce : 仅此一次
-RKAlarmRepeatModeEveryday : 每天
-RKAlarmRepeatModeWeekday : 工作日
-RKAlarmRepeatModeWeekend : 每周末
-RKAlarmRepeatModeEveryMonday : 每周一
-RKAlarmRepeatModeEveryTuesday : 每周二
-RKAlarmRepeatModeEveryWednesday : 每周三
-RKAlarmRepeatModeEveryThursday : 每周四
-RKAlarmRepeatModeEveryFriday : 每周五
-RKAlarmRepeatModeEverySaturday : 每周六
-RKAlarmRepeatModeEverySunday : 每周日
+SDKAlarmRepeatModeOnce : 仅此一次
+SDKAlarmRepeatModeEveryday : 每天
+SDKAlarmRepeatModeWeekday : 工作日
+SDKAlarmRepeatModeWeekend : 每周末
+SDKAlarmRepeatModeEveryMonday : 每周一
+SDKAlarmRepeatModeEveryTuesday : 每周二
+SDKAlarmRepeatModeEveryWednesday : 每周三
+SDKAlarmRepeatModeEveryThursday : 每周四
+SDKAlarmRepeatModeEveryFriday : 每周五
+SDKAlarmRepeatModeEverySaturday : 每周六
+SDKAlarmRepeatModeEverySunday : 每周日
 ```
 
 ---
@@ -79,7 +97,13 @@ RKAlarmRepeatModeEverySunday : 每周日
 Swift:
 
 ```swift
-RokidMobileSDK.skill?.alarm.delete(deviceId: String, alarm: RKAlarm)
+RokidMobileSDK.skill?.alarm.delete(deviceId: String, alarm: SDKAlarm)
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.skill.alarm deleteWithDeviceId:@"xxx" alarm: alarm];
 ```
 
 ---
@@ -93,7 +117,13 @@ RokidMobileSDK.skill?.alarm.delete(deviceId: String, alarm: RKAlarm)
 Swift:
 
 ```swift
-RokidMobileSDK.skill?.alarm.update(deviceId: String, alarm: RKAlarm, to: RKAlarm)
+RokidMobileSDK.skill?.alarm.update(deviceId: String, alarm: SDKAlarm, to: SDKAlarm)
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.skill.alarm updateWithDeviceId:@"XXX" alarm:alarm to:alarmNew];
 ```
 
 ---

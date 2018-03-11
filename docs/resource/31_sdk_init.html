@@ -650,12 +650,28 @@
                               appSecret: <span class="hljs-type">String</span>,
                               escaping complete:(success: <span class="hljs-type">Bool</span>) -&gt; <span class="hljs-type">Void</span>)
 </code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc">[RokidMobileSDK.shared initSDKWithAppKey:<span class="hljs-string">&quot;xxx&quot;</span>
+                                   appSecret:<span class="hljs-string">&quot;xxx&quot;</span>
+                                   accessKey:<span class="hljs-string">&quot;xxx&quot;</span>
+                                  completion:^(RKError * error) {
+        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;[SDK init] result = %@&quot;</span>, error);
+
+        <span class="hljs-comment">// SDK init &#x5B8C;&#x6210;</span>
+        <span class="hljs-keyword">if</span> (!error) {
+            <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;SDK init success&quot;</span>);
+        };
+    }];
+</code></pre>
 <hr>
 <h2 id="2&#x3001;debug-&#x6A21;&#x5F0F;">2&#x3001;Debug &#x6A21;&#x5F0F;</h2>
 <p>&#x5F00;&#x542F; Debug &#x5F00;&#x53D1;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.debug()
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.shared.debug = <span class="hljs-literal">true</span>
+</code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc">RokidMobileSDK.shared.debug = <span class="hljs-literal">true</span>;
 </code></pre>
 <hr>
 <h2 id="3&#x3001;&#x5F00;&#x542F;&#x65E5;&#x5FD7;">3&#x3001;&#x5F00;&#x542F;&#x65E5;&#x5FD7;</h2>
@@ -720,7 +736,7 @@ RokidMobileSDK: &#x767B;&#x9646;&#x6210;&#x529F;(&#x5931;&#x8D25;, &#x5931;&#x8D
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SDK 初始化","level":"1.5","depth":1,"next":{"title":"帐号模块 Account","level":"1.6","depth":1,"path":"resource/40_account.md","ref":"resource/40_account.md","articles":[{"title":"登录 Login","level":"1.6.1","depth":2,"path":"resource/41_token_login.md","ref":"resource/41_token_login.md","articles":[]},{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]}]},"previous":{"title":"Demo 代码","level":"1.4","depth":1,"path":"resource/20_demo.md","ref":"resource/20_demo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/31_sdk_init.md","mtime":"2018-03-09T07:58:37.204Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-09T08:00:37.996Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SDK 初始化","level":"1.5","depth":1,"next":{"title":"帐号模块 Account","level":"1.6","depth":1,"path":"resource/40_account.md","ref":"resource/40_account.md","articles":[{"title":"登录 Login","level":"1.6.1","depth":2,"path":"resource/41_token_login.md","ref":"resource/41_token_login.md","articles":[]},{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]}]},"previous":{"title":"Demo 代码","level":"1.4","depth":1,"path":"resource/20_demo.md","ref":"resource/20_demo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/31_sdk_init.md","mtime":"2018-03-11T08:00:47.910Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:39:18.499Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

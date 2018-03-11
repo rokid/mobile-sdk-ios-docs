@@ -14,8 +14,17 @@
 Swift:
 
 ```swift
-// name为RokidMobileSDK.BTDevice.name
-RokidMobileSDK.binder.connectBLEDevice(name: String, complete:(RKError?)->Void)
+RokidMobileSDK.binder.connectBLEDevice(device: RKBLEDevice, complete:(RKError?)->Void) {
+    // ...
+}
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.binder connectBLEDevice:device complete:^(BOOL result, NSError * error) {
+    // ...
+}];
 ```
 
 ---

@@ -14,7 +14,13 @@
 Swift:
 
 ```swift
-RokidMobileSDK.home.sendAsr(asr: String, to device: RKDevice)
+RokidMobileSDK.vui.sendAsr(asr: String, to device: RKDevice)
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.vui  sendAsrWithAsr: @"XXX" to: self.device];
 ```
 
 ---

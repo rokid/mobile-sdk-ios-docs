@@ -17,6 +17,12 @@ Swift:
 RokidMobileSDK.device.getBasicInfo(deviceId: String) -> [String: Any]?
 ```
 
+Objc:
+
+```objc
+[RokidMobileSDK.device getBasicInfoWithDeviceId: self.device.id] ;
+```
+
 ---
 
 

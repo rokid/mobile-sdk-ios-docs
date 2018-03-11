@@ -7,10 +7,18 @@ Swift:
 
 ```swift
 RokidMobileSDK.skill?.remind.getList(deviceId: String,
-                           completion: @escaping (_ error: RKError?, _ reminds: [RKRemind]?) -> Void)
+                           completion: @escaping (_ error: RKError?, _ reminds: [SDKRemind]?) -> Void)
 ```
 
-RKRemind 字段说明：
+Objc:
+
+```objc
+[RokidMobileSDK.skill.remind getListWithDeviceId:self.device.id completion:^(RKError * error, NSArray<SDKRemind *> * remindArr) {
+    // ... 
+}];
+```
+
+SDKRemind 字段说明：
 
 | 参数 | 类型 | 必要？ | 说明 |
 | --- | --- | --- | --- |
@@ -30,7 +38,13 @@ RKRemind 字段说明：
 Swift:
 
 ```swift
-RokidMobileSDK.skill?.remind.delete(deviceId: String, remind: RKRemind)
+RokidMobileSDK.skill?.remind.delete(deviceId: String, remind: SDKRemind)
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.skill.remind deleteWithDeviceId:@"XXX" remind:reminder];
 ```
 
 ---
