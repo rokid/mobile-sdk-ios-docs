@@ -23,3 +23,14 @@ Demo 工程中提供了 Podfile，里面已经写好了依赖的工程
 
 * 注意目前只有 Debug 版本，且运行时注意是模拟器或真机环境 
 
+### SDK依赖的第三方开源库
+
+```
+  pod 'SQLite.swift', '~> 0.11.4'
+  pod 'HandyJSON', '~> 1.8.0'
+  pod 'ProtocolBuffers-Swift', '3.0.23'
+  pod 'CocoaAsyncSocket', '7.6.0'
+  pod 'Starscream', '2.0.3'
+```
+
+
