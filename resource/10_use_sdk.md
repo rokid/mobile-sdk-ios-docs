@@ -30,6 +30,7 @@ Demo 工程中提供了 Podfile，里面已经写好了依赖的工程
   pod 'ProtocolBuffers-Swift', '3.0.23'
   pod 'CocoaAsyncSocket', '7.6.0'
   pod 'Starscream', '2.0.3'
+  pod 'ReachabilitySwift', '4.1.0'
 ```
 
 

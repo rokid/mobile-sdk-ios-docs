@@ -1,5 +1,10 @@
 #  版本更新详情
 
+* v1.0.5
+    
+    [修改] 增加asr纠错接口<br>
+    [修改] pod中引入 'ReachabilitySwift'
+
 * v1.0.4
     
     [修改] 统一 SDK 前缀。<br>

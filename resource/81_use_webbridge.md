@@ -54,6 +54,10 @@ extension WebviewViewController: RKBridgeModuleAppDelegate  {
     func openExternal(urlStr: String) {
     }
     
+    // 返回到指定module的page页面
+    func goBack(module: String, page: String) {
+    }
+    
 }
 
 extension WebviewViewController: RKBridgeModuleViewDelegate  {
@@ -137,6 +141,9 @@ Objc:
 - (void)openExternalWithUrlStr:(NSString * _Nonnull)urlStr {
 }
 
+// 返回到指定module的page页面
+- (void)goBackWithModule:(NSString * _Nonnull)module_ page:(NSString * _Nonnull)page;
+    
 // 显示 Toast
 - (void)showToastWithMessage:(NSString * _Nonnull)message {
 }
