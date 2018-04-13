@@ -31,7 +31,7 @@
  - [快速接入](resource/81_use_webbridge.md)
 * [Vui 反馈 模块](resource/90_vui.md)
  - [Card 列表](resource/91_card_list.md)
- - [发送 ASR](resource/93_asr.md)
+ - [发送 ASR及纠错](resource/93_asr.md)
  - [发送 TTS](resource/94_tts.md)
 * [消息 Event](resource/Y0_event.md)
 
