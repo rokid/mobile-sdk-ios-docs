@@ -2,12 +2,21 @@
 ## 智能家居 H5 
 使用 iOS Webview 控件，并且基础 Rokid Mobile SDK webbidge 才能正常打开 下面连接。
 
-pre环境：https://s.rokidcdn.com/homebase/himalaya/pre/index.html#/homes/index
+线上：https://s.rokidcdn.com/homebase/tob/index.html#/homes/index?theme=default
+
+预发：https://s.rokidcdn.com/homebase/tob/pre/index.html#/homes/index?theme=default  
 
 Rokid Mobile SDK 环境 为 release
 
-dev环境：https://s.rokidcdn.com/homebase/himalaya/dev/index.html#/homes/index
+
+
+
+测试：https://s.rokidcdn.com/homebase/tob/dev/index.html#/homes/index?theme=default  
 
 Rokid Mobile SDK 环境 为 Debug
+
+
+
+
 
 
