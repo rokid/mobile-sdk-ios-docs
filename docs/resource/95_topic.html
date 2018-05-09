@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>配网模块 Binder · GitBook</title>
+        <title>发送 TOPIC · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="51_ble_status.html" />
+    <link rel="next" href="Y0_event.html" />
     
     
-    <link rel="prev" href="42_logout.html" />
+    <link rel="prev" href="94_tts.html" />
     
 
     </head>
@@ -199,7 +199,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7" data-path="50_binder.html">
+        <li class="chapter " data-level="1.7" data-path="50_binder.html">
             
                 <a href="50_binder.html">
             
@@ -549,7 +549,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.4" data-path="95_topic.html">
+        <li class="chapter active" data-level="1.11.4" data-path="95_topic.html">
             
                 <a href="95_topic.html">
             
@@ -610,7 +610,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >配网模块 Binder</a>
+        <a href=".." >发送 TOPIC</a>
     </h1>
 </div>
 
@@ -625,8 +625,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x914D;&#x7F51;&#x6A21;&#x5757;-binder">&#x914D;&#x7F51;&#x6A21;&#x5757; Binder</h1>
-<p>&#x4F7F;&#x7528;&#x6B64;&#x6A21;&#x5757;&#xFF0C;&#x5B9E;&#x73B0; &#x914D;&#x7F51;&#x529F;&#x80FD;&#x3002;</p>
+                                <h1 id="vui-&#x53CD;&#x9988;-&#x6A21;&#x5757;">Vui &#x53CD;&#x9988; &#x6A21;&#x5757;</h1>
+<h2 id="&#x53D1;&#x9001;topic">&#x53D1;&#x9001;TOPIC</h2>
+<p>&#x53D1;&#x9001; TOPIC&#xFF0C;&#x5C31;&#x662F; &#x53D1;&#x9001;&#x4E00;&#x6761;&#x6307;&#x5B9A;topic&#x7684;message &#x5185;&#x5BB9;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>device</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td>topic</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x7684;&#x4E3B;&#x9898;</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x6D88;&#x606F;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<p>Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.vui.sendMessage(topic: <span class="hljs-string">&quot;topic&quot;</span>, text: <span class="hljs-string">&quot;text&quot;</span>, to: device)
+</code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc"> [RokidMobileSDK.vui sendMessageWithTopic:<span class="hljs-string">@&quot;topic&quot;</span> text:<span class="hljs-string">@&quot;text&quot;</span> to: device];
+</code></pre>
+<hr>
 
                                 
                                 </section>
@@ -654,12 +694,12 @@
 
             
                 
-                <a href="42_logout.html" class="navigation navigation-prev " aria-label="Previous page: 登出 Logout">
+                <a href="94_tts.html" class="navigation navigation-prev " aria-label="Previous page: 发送 TTS">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="51_ble_status.html" class="navigation navigation-next " aria-label="Next page: 蓝牙状态">
+                <a href="Y0_event.html" class="navigation navigation-next " aria-label="Next page: 消息 Event">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -670,7 +710,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"配网模块 Binder","level":"1.7","depth":1,"next":{"title":"蓝牙状态","level":"1.7.1","depth":2,"path":"resource/51_ble_status.md","ref":"resource/51_ble_status.md","articles":[]},"previous":{"title":"登出 Logout","level":"1.6.2","depth":2,"path":"resource/42_logout.md","ref":"resource/42_logout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/50_binder.md","mtime":"2018-03-30T02:45:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T02:36:58.382Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"发送 TOPIC","level":"1.11.4","depth":2,"next":{"title":"消息 Event","level":"1.12","depth":1,"path":"resource/Y0_event.md","ref":"resource/Y0_event.md","articles":[]},"previous":{"title":"发送 TTS","level":"1.11.3","depth":2,"path":"resource/94_tts.md","ref":"resource/94_tts.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/95_topic.md","mtime":"2018-05-09T02:35:47.406Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T02:36:58.382Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

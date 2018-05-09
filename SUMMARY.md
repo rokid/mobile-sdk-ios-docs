@@ -33,6 +33,7 @@
  - [Card 列表](resource/91_card_list.md)
  - [发送 ASR及纠错](resource/93_asr.md)
  - [发送 TTS](resource/94_tts.md)
+ - [发送 TOPIC](resource/95_topic.md)
 * [消息 Event](resource/Y0_event.md)
 
 
