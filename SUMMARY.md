@@ -3,6 +3,7 @@
 * [介绍](README.md)
 * [修订记录](resource/00_version.md)
 * [SDK 使用方式](resource/10_use_sdk.md)
+ - [手动导入](resource/11_manual_sdk.md)
 * [Demo 代码](resource/20_demo.md)
 * [SDK 初始化](resource/31_sdk_init.md)
 * [帐号模块 Account](resource/40_account.md)
