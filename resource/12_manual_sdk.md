@@ -1,5 +1,34 @@
 # 手动 导入 SDK
 
+## 1、使用时的工程设置
+
+* Podfile
+
+```
+Demo 工程中提供了 Podfile，里面已经写好了依赖的工程
+```
+
+* 工程设置
+
+```
+在工程的 Embed Library 中加上我们的 framework
+在 Framework Search Path 中把 framework 所在路径设置好
+```
+
+* 注意目前只有 Debug 版本，且运行时注意是模拟器或真机环境 
+
+## 2、SDK依赖的第三方开源库
+
+```
+  pod 'SQLite.swift', '~> 0.11.4'
+  pod 'ProtocolBuffers-Swift', '3.0.23'
+  pod 'CocoaAsyncSocket', '7.6.0'
+  pod 'Starscream', '2.0.3'
+  pod 'ReachabilitySwift', '4.1.0'
+```
+
+## 3、导入 SDK
+
 1. 新建工程
 
 2. 选择工程文件 -> 选择target -> General
