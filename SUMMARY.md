@@ -10,6 +10,7 @@
 * [帐号模块 Account](resource/40_account.md)
     * [登录 Login](resource/41_token_login.md)
     * [登出 Logout](resource/42_logout.md)
+    * [帐号信息 Account Info](resource/43_account_info.md)
 * [配网模块 Binder](resource/50_binder.md)
     * [蓝牙状态](resource/51_ble_status.md)
     * [蓝牙扫描](resource/52_ble_scan.md)
