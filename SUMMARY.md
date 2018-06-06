@@ -26,6 +26,7 @@
     * [获取单个设备](resource/67_get_device_by_id.md)
     * [恢复出厂设置](resource/68_reset.md)
     * [设备解绑](resource/69_unbind.md)
+    * [夜间模式](resource/6B_nightmode.md)
 * [技能模块 Skill](resource/70_skill.md)
     * [闹钟](resource/71_alarm.md)
     * [提醒](resource/72_remind.md)

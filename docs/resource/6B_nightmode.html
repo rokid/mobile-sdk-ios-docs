@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>默认设备 · GitBook</title>
+        <title>夜间模式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="67_get_device_by_id.html" />
+    <link rel="next" href="70_skill.html" />
     
     
-    <link rel="prev" href="65_system_version.html" />
+    <link rel="prev" href="69_unbind.html" />
     
 
     </head>
@@ -394,7 +394,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.6" data-path="66_default_device.html">
+        <li class="chapter " data-level="1.8.6" data-path="66_default_device.html">
             
                 <a href="66_default_device.html">
             
@@ -446,7 +446,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.10" data-path="6B_nightmode.html">
+        <li class="chapter active" data-level="1.8.10" data-path="6B_nightmode.html">
             
                 <a href="6B_nightmode.html">
             
@@ -668,7 +668,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >默认设备</a>
+        <a href=".." >夜间模式</a>
     </h1>
 </div>
 
@@ -683,9 +683,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8BBE;&#x5907;&#x6A21;&#x5757;-device">&#x8BBE;&#x5907;&#x6A21;&#x5757; Device</h1>
-<h2 id="1&#x3001;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x672C;&#x5730;&#x7F13;&#x5B58;">1&#x3001;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x8BBE;&#x5907;(&#x672C;&#x5730;&#x7F13;&#x5B58;)</h2>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+                                <h1 id="&#x8BBE;&#x5907;&#x6A21;&#x5757;-device"># &#x8BBE;&#x5907;&#x6A21;&#x5757; Device</h1>
+<h2 id="1&#x3001;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;">1&#x3001;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</h2>
+<p> <strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+ &#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</p>
+<p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<p> Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.device.getNightMode(device: <span class="hljs-type">RKDevice</span>, completion: @escaping (<span class="hljs-number">_</span> error: <span class="hljs-type">RKError</span>?, <span class="hljs-number">_</span> nightMode: <span class="hljs-type">RKDeviceNightMode</span>?) -&gt; <span class="hljs-type">Void</span>)
+</code></pre>
+<h2 id=""> </h2>
+<hr>
+<h2 id="2&#x3001;&#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;">2&#x3001;&#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</h2>
+<p> <strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+ &#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</p>
+<p> <strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
@@ -700,20 +711,11 @@
 <td>device</td>
 <td>RKDevice</td>
 <td>&#x662F;</td>
-<td>&#x8BBE;&#x5907;Entity</td>
+<td>&#x8BBE;&#x5907;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
-<p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.device.setCurrentDevice(device: <span class="hljs-type">RKDevice</span>)
-</code></pre>
-<p>Objc:</p>
-<pre><code class="lang-objc">[RokidMobileSDK.device setCurrentDeviceWithDevice:<span class="hljs-keyword">self</span>.device];
-</code></pre>
-<hr>
-<h2 id="2&#x3001;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x672C;&#x5730;&#x7F13;&#x5B58;">2&#x3001;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8BBE;&#x5907;(&#x672C;&#x5730;&#x7F13;&#x5B58;)</h2>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<p>RKDeviceNightMode &#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x5982;&#x4E0B;:</p>
 <table>
 <thead>
 <tr>
@@ -725,18 +727,31 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>state</td>
+<td>RKDeviceNightModeState</td>
+<td>&#x662F;</td>
+<td>open: &#x6253;&#x5F00;&#x591C;&#x95F4;&#x6A21;&#x5F0F;&lt;/br&gt;close:</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;ID</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;ID</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
-<p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.device.getCurrentDevice() -&gt; <span class="hljs-type">RKDevice</span>?
+<p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<p> Swift:</p>
+<pre><code class="lang-swift"> <span class="hljs-type">RokidMobileSDK</span>.device.updateNightMode(device: <span class="hljs-type">RKDevice</span>,
+                                      nightmode: <span class="hljs-type">RKDeviceNightMode</span>,
+                                      completion: @escaping <span class="hljs-type">Completion</span>) {
 </code></pre>
-<p>Objc:</p>
-<pre><code class="lang-objc">RKDevice * device = [RokidMobileSDK.device getCurrentDevice];
-</code></pre>
-<hr>
 
                                 
                                 </section>
@@ -764,12 +779,12 @@
 
             
                 
-                <a href="65_system_version.html" class="navigation navigation-prev " aria-label="Previous page: 设备系统版本">
+                <a href="69_unbind.html" class="navigation navigation-prev " aria-label="Previous page: 设备解绑">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="67_get_device_by_id.html" class="navigation navigation-next " aria-label="Next page: 获取单个设备">
+                <a href="70_skill.html" class="navigation navigation-next " aria-label="Next page: 技能模块 Skill">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -780,7 +795,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"默认设备","level":"1.8.6","depth":2,"next":{"title":"获取单个设备","level":"1.8.7","depth":2,"path":"resource/67_get_device_by_id.md","ref":"resource/67_get_device_by_id.md","articles":[]},"previous":{"title":"设备系统版本","level":"1.8.5","depth":2,"path":"resource/65_system_version.md","ref":"resource/65_system_version.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/66_default_device.md","mtime":"2018-03-11T08:13:07.027Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-06T16:07:55.583Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"夜间模式","level":"1.8.10","depth":2,"next":{"title":"技能模块 Skill","level":"1.9","depth":1,"path":"resource/70_skill.md","ref":"resource/70_skill.md","articles":[{"title":"闹钟","level":"1.9.1","depth":2,"path":"resource/71_alarm.md","ref":"resource/71_alarm.md","articles":[]},{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},{"title":"智能家居","level":"1.9.3","depth":2,"path":"resource/73_homebase.md","ref":"resource/73_homebase.md","articles":[]}]},"previous":{"title":"设备解绑","level":"1.8.9","depth":2,"path":"resource/69_unbind.md","ref":"resource/69_unbind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/6B_nightmode.md","mtime":"2018-06-06T16:07:20.257Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-06T16:07:55.583Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
