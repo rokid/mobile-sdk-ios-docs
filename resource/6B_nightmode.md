@@ -9,9 +9,19 @@
  Swift:
 
 ```swift
-RokidMobileSDK.device.getNightMode(device: RKDevice, completion: @escaping (_ error: RKError?, _ nightMode: RKDeviceNightMode?) -> Void)
+RokidMobileSDK.device.getNightMode(device: RKDevice, completion: @escaping (_ error: RKError?, _ nightMode: SDKDeviceNightMode?) -> Void)
 ```
-## 
+
+Objc:
+ 
+ ```objc
+ RKDevice * device = [RokidMobileSDK.device getCurrentDevice];
+            
+[RokidMobileSDK.device getNightModeWithDevice:device completion:^(RKError * error, SDKDeviceNightMode * nightMode) {
+            /// TODO
+}];
+ ```
+
 ---
  
 ## 2、更新设备夜间模式
@@ -25,11 +35,11 @@ RokidMobileSDK.device.getNightMode(device: RKDevice, completion: @escaping (_ er
 | ------ | ----- | ----- | ----- |
 | device | RKDevice | 是 | 设备 |
 
-RKDeviceNightMode 对象结构如下:
+SDKDeviceNightMode 对象结构如下:
 
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
-| state | RKDeviceNightModeState | 是 | open: 打开夜间模式</br>close: |
+| state | SDKDeviceNightModeState | 是 | open: 打开夜间模式; </br> close: 关闭夜间模式 |
 | startTime | String | 是 | 设备ID |
 | endTime | String | 是 | 设备ID |
 
@@ -38,9 +48,29 @@ RKDeviceNightMode 对象结构如下:
  Swift:
  
  ```swift
- RokidMobileSDK.device.updateNightMode(device: RKDevice,
-                                      nightmode: RKDeviceNightMode,
+ let device = RokidMobileSDK.device.getCurrentDevice()
+ let nightMode = SDKDeviceNightMode()
+ nightMode.state = .open
+ nightMode.startTime = "23:00"
+ nightMode.endTime = "7:00"
+ 
+ RokidMobileSDK.device.updateNightMode(device: device,
+                                      nightmode: nightMode,
                                       completion: @escaping Completion) {
+ ```
+ 
+ Objc:
+ 
+ ```objc
+ RKDevice * device = [RokidMobileSDK.device getCurrentDevice];
+ SDKDeviceNightMode * nightMode = [SDKDeviceNightMode init];
+ nightMode.state = SDKDeviceNightModeStateOpen;
+ nightMode.startTime = @"23:00";
+ nightMode.endTime = @"7:00";
+            
+ [RokidMobileSDK.device updateNightModeWithDevice:device nightmode:nightMode completion:^(RKError * error, RKDevice * device) {
+                // TODO 处理回调
+ }];
  ```
 
 
