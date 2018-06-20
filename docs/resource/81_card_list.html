@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>SDK 使用方式 · GitBook</title>
+        <title>Card 列表 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="11_pod_sdk.html" />
+    <link rel="next" href="82_asr.html" />
     
     
 
@@ -131,7 +131,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="10_use_sdk.html">
+        <li class="chapter " data-level="1.3.1" data-path="10_use_sdk.html">
             
                 <a href="10_use_sdk.html">
             
@@ -615,7 +615,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="81_card_list.html">
+        <li class="chapter active" data-level="1.9.1" data-path="81_card_list.html">
             
                 <a href="81_card_list.html">
             
@@ -754,7 +754,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >SDK 使用方式</a>
+        <a href=".." >Card 列表</a>
     </h1>
 </div>
 
@@ -769,13 +769,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rokid-mobile-sdk-ios&#x7248;-&#x4F7F;&#x7528;&#x65B9;&#x5F0F;">Rokid Mobile SDK iOS&#x7248; &#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h1>
-<h2 id="sdk&#x5BFC;&#x5165;&#x65B9;&#x5F0F;">SDK&#x5BFC;&#x5165;&#x65B9;&#x5F0F;</h2>
-<ul>
-<li>&#x652F;&#x6301; <font color="red">Pod (&#x63A8;&#x8350;&#x4F7F;&#x7528;)</font> &#x548C; &#x624B;&#x52A8;&#x5BFC;&#x5165;</li>
-<li>&#x6682;&#x65F6;&#x53EA;&#x652F;&#x6301; Debug &#x7248;&#x672C;&#x7684; Framework &#x5305;</li>
-<li>&#x63D0;&#x4F9B;&#x4E86;&#x6D4B;&#x8BD5;&#x5DE5;&#x7A0B;&#xFF0C;&#x5728; RokidSDKDemo &#x4E0B;&#xFF0C;&#x5305;&#x62EC; Objc &#x548C; swift(&#x6682;&#x672A;&#x5B9E;&#x73B0;) &#x4E24;&#x4E2A;&#x7248;&#x672C;</li>
-</ul>
+                                <h1 id="vui-&#x53CD;&#x9988;-&#x6A21;&#x5757;">Vui &#x53CD;&#x9988; &#x6A21;&#x5757;</h1>
+<h2 id="&#x83B7;&#x5F97;-card-&#x5217;&#x8868;">&#x83B7;&#x5F97; card &#x5217;&#x8868;</h2>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maxDbId</td>
+<td>Int</td>
+<td>&#x662F;</td>
+<td>card &#x7684; db id</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>Int</td>
+<td>&#x5426;</td>
+<td>&#x9875;&#x5927;&#x5C0F;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
+<p>Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.vui.getCardList(maxDbId: <span class="hljs-type">Int</span>, completion: @escaping (<span class="hljs-number">_</span> error: <span class="hljs-type">RKError</span>?, <span class="hljs-number">_</span> cardList: [<span class="hljs-type">RKCard</span>]?) -&gt; <span class="hljs-type">Void</span>) -&gt; <span class="hljs-type">Void</span>
+</code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc">[RokidMobileSDK.vui getCardListWithMaxDbId:<span class="hljs-number">0</span> completion:^(RKError * error, <span class="hljs-built_in">NSArray</span>&lt;RKCard *&gt; * cardArray) {
+    <span class="hljs-keyword">for</span> (RKCard *card <span class="hljs-keyword">in</span> cardArray) {
+        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;msg = %@&quot;</span>, card.msgText);
+    }
+}];
+</code></pre>
+<p>Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.vui.getCardList(maxDbId: <span class="hljs-type">Int</span>, pageSize: <span class="hljs-type">Int</span> = <span class="hljs-number">20</span>, completion: @escaping (<span class="hljs-number">_</span> error: <span class="hljs-type">RKError</span>?, <span class="hljs-number">_</span> cardList: [<span class="hljs-type">RKCard</span>]?) -&gt; <span class="hljs-type">Void</span>) -&gt; <span class="hljs-type">Void</span>
+</code></pre>
+<p>Objc</p>
+<pre><code class="lang-objc">[RokidMobileSDK.vui getCardListWithMaxDbId:<span class="hljs-number">0</span> pageSize:<span class="hljs-number">20</span> completion:^(RKError * error, <span class="hljs-built_in">NSArray</span>&lt;RKCard *&gt; * cardArray) {
+    <span class="hljs-keyword">for</span> (RKCard *card <span class="hljs-keyword">in</span> cardArray) {
+        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;msg = %@&quot;</span>, card.msgText);
+    }
+}];
+</code></pre>
+<hr>
 
                                 
                                 </section>
@@ -804,7 +846,7 @@
             
                 
                 
-                <a href="11_pod_sdk.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Pod引入">
+                <a href="82_asr.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 发送 ASR及纠错">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -815,7 +857,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SDK 使用方式","level":"1.3.1","depth":2,"next":{"title":"Pod引入","level":"1.3.1.1","depth":3,"path":"resource/11_pod_sdk.md","ref":"resource/11_pod_sdk.md","articles":[]},"previous":{"title":"SDK 使用入门","level":"1.3","depth":1,"ref":"","articles":[{"title":"SDK 使用方式","level":"1.3.1","depth":2,"path":"resource/10_use_sdk.md","ref":"resource/10_use_sdk.md","articles":[{"title":"Pod引入","level":"1.3.1.1","depth":3,"path":"resource/11_pod_sdk.md","ref":"resource/11_pod_sdk.md","articles":[]},{"title":"手动导入","level":"1.3.1.2","depth":3,"path":"resource/12_manual_sdk.md","ref":"resource/12_manual_sdk.md","articles":[]}]},{"title":"Demo 代码","level":"1.3.2","depth":2,"path":"resource/13_demo.md","ref":"resource/13_demo.md","articles":[]},{"title":"SDK 初始化","level":"1.3.3","depth":2,"path":"resource/14_sdk_init.md","ref":"resource/14_sdk_init.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/10_use_sdk.md","mtime":"2018-05-22T02:43:08.829Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-20T03:54:30.747Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Card 列表","level":"1.9.1","depth":2,"next":{"title":"发送 ASR及纠错","level":"1.9.2","depth":2,"path":"resource/82_asr.md","ref":"resource/82_asr.md","articles":[]},"previous":{"title":"Vui 反馈 模块","level":"1.9","depth":1,"ref":"","articles":[{"title":"Card 列表","level":"1.9.1","depth":2,"path":"resource/81_card_list.md","ref":"resource/81_card_list.md","articles":[]},{"title":"发送 ASR及纠错","level":"1.9.2","depth":2,"path":"resource/82_asr.md","ref":"resource/82_asr.md","articles":[]},{"title":"发送 TTS","level":"1.9.3","depth":2,"path":"resource/83_tts.md","ref":"resource/83_tts.md","articles":[]},{"title":"发送 TOPIC","level":"1.9.4","depth":2,"path":"resource/84_topic.md","ref":"resource/84_topic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/81_card_list.md","mtime":"2018-06-20T03:15:04.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-20T03:54:30.747Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

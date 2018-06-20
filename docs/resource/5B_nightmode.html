@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>SDK 使用方式 · GitBook</title>
+        <title>夜间模式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="11_pod_sdk.html" />
     
+    <link rel="prev" href="5A_ping.html" />
     
 
     </head>
@@ -131,7 +131,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="10_use_sdk.html">
+        <li class="chapter " data-level="1.3.1" data-path="10_use_sdk.html">
             
                 <a href="10_use_sdk.html">
             
@@ -480,7 +480,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.11" data-path="5B_nightmode.html">
+        <li class="chapter active" data-level="1.6.11" data-path="5B_nightmode.html">
             
                 <a href="5B_nightmode.html">
             
@@ -754,7 +754,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >SDK 使用方式</a>
+        <a href=".." >夜间模式</a>
     </h1>
 </div>
 
@@ -769,13 +769,98 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rokid-mobile-sdk-ios&#x7248;-&#x4F7F;&#x7528;&#x65B9;&#x5F0F;">Rokid Mobile SDK iOS&#x7248; &#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h1>
-<h2 id="sdk&#x5BFC;&#x5165;&#x65B9;&#x5F0F;">SDK&#x5BFC;&#x5165;&#x65B9;&#x5F0F;</h2>
-<ul>
-<li>&#x652F;&#x6301; <font color="red">Pod (&#x63A8;&#x8350;&#x4F7F;&#x7528;)</font> &#x548C; &#x624B;&#x52A8;&#x5BFC;&#x5165;</li>
-<li>&#x6682;&#x65F6;&#x53EA;&#x652F;&#x6301; Debug &#x7248;&#x672C;&#x7684; Framework &#x5305;</li>
-<li>&#x63D0;&#x4F9B;&#x4E86;&#x6D4B;&#x8BD5;&#x5DE5;&#x7A0B;&#xFF0C;&#x5728; RokidSDKDemo &#x4E0B;&#xFF0C;&#x5305;&#x62EC; Objc &#x548C; swift(&#x6682;&#x672A;&#x5B9E;&#x73B0;) &#x4E24;&#x4E2A;&#x7248;&#x672C;</li>
-</ul>
+                                <h1 id="&#x8BBE;&#x5907;&#x6A21;&#x5757;-device"># &#x8BBE;&#x5907;&#x6A21;&#x5757; Device</h1>
+<h2 id="1&#x3001;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;">1&#x3001;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</h2>
+<p> <strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+ &#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</p>
+<p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<p> Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.device.getNightMode(device: <span class="hljs-type">RKDevice</span>, completion: @escaping (<span class="hljs-number">_</span> error: <span class="hljs-type">RKError</span>?, <span class="hljs-number">_</span> nightMode: <span class="hljs-type">SDKDeviceNightMode</span>?) -&gt; <span class="hljs-type">Void</span>)
+</code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc"> RKDevice * device = [RokidMobileSDK.device getCurrentDevice];
+
+[RokidMobileSDK.device getNightModeWithDevice:device completion:^(RKError * error, SDKDeviceNightMode * nightMode) {
+            <span class="hljs-comment">/// TODO</span>
+}];
+</code></pre>
+<hr>
+<h2 id="2&#x3001;&#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;">2&#x3001;&#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</h2>
+<p> <strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+ &#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</p>
+<p> <strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>device</td>
+<td>RKDevice</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;</td>
+</tr>
+</tbody>
+</table>
+<p>SDKDeviceNightMode &#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state</td>
+<td>SDKDeviceNightModeState</td>
+<td>&#x662F;</td>
+<td>open: &#x6253;&#x5F00;&#x591C;&#x95F4;&#x6A21;&#x5F0F;; &lt;/br&gt; close: &#x5173;&#x95ED;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;ID</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;ID</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<p> Swift:</p>
+<pre><code class="lang-swift"> <span class="hljs-keyword">let</span> device = <span class="hljs-type">RokidMobileSDK</span>.device.getCurrentDevice()
+ <span class="hljs-keyword">let</span> nightMode = <span class="hljs-type">SDKDeviceNightMode</span>()
+ nightMode.state = .open
+ nightMode.startTime = <span class="hljs-string">&quot;23:00&quot;</span>
+ nightMode.endTime = <span class="hljs-string">&quot;7:00&quot;</span>
+
+ <span class="hljs-type">RokidMobileSDK</span>.device.updateNightMode(device: device,
+                                      nightmode: nightMode,
+                                      completion: @escaping <span class="hljs-type">Completion</span>) {
+</code></pre>
+<p> Objc:</p>
+<pre><code class="lang-objc"> RKDevice * device = [RokidMobileSDK.device getCurrentDevice];
+ SDKDeviceNightMode * nightMode = [SDKDeviceNightMode init];
+ nightMode.state = SDKDeviceNightModeStateOpen;
+ nightMode.startTime = <span class="hljs-string">@&quot;23:00&quot;</span>;
+ nightMode.endTime = <span class="hljs-string">@&quot;7:00&quot;</span>;
+
+ [RokidMobileSDK.device updateNightModeWithDevice:device nightmode:nightMode completion:^(RKError * error, RKDevice * device) {
+                <span class="hljs-comment">// TODO &#x5904;&#x7406;&#x56DE;&#x8C03;</span>
+ }];
+</code></pre>
 
                                 
                                 </section>
@@ -803,10 +888,10 @@
 
             
                 
-                
-                <a href="11_pod_sdk.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Pod引入">
-                    <i class="fa fa-angle-right"></i>
+                <a href="5A_ping.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ping设备状态">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -815,7 +900,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SDK 使用方式","level":"1.3.1","depth":2,"next":{"title":"Pod引入","level":"1.3.1.1","depth":3,"path":"resource/11_pod_sdk.md","ref":"resource/11_pod_sdk.md","articles":[]},"previous":{"title":"SDK 使用入门","level":"1.3","depth":1,"ref":"","articles":[{"title":"SDK 使用方式","level":"1.3.1","depth":2,"path":"resource/10_use_sdk.md","ref":"resource/10_use_sdk.md","articles":[{"title":"Pod引入","level":"1.3.1.1","depth":3,"path":"resource/11_pod_sdk.md","ref":"resource/11_pod_sdk.md","articles":[]},{"title":"手动导入","level":"1.3.1.2","depth":3,"path":"resource/12_manual_sdk.md","ref":"resource/12_manual_sdk.md","articles":[]}]},{"title":"Demo 代码","level":"1.3.2","depth":2,"path":"resource/13_demo.md","ref":"resource/13_demo.md","articles":[]},{"title":"SDK 初始化","level":"1.3.3","depth":2,"path":"resource/14_sdk_init.md","ref":"resource/14_sdk_init.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/10_use_sdk.md","mtime":"2018-05-22T02:43:08.829Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-20T03:54:30.747Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"夜间模式","level":"1.6.11","depth":2,"next":{"title":"技能模块 Skill","level":"1.7","depth":1,"ref":"","articles":[{"title":"闹钟","level":"1.7.1","depth":2,"path":"resource/61_alarm.md","ref":"resource/61_alarm.md","articles":[]},{"title":"提醒","level":"1.7.2","depth":2,"path":"resource/62_remind.md","ref":"resource/62_remind.md","articles":[]},{"title":"智能家居","level":"1.7.3","depth":2,"path":"resource/63_homebase.md","ref":"resource/63_homebase.md","articles":[]},{"title":"技能商店","level":"1.7.4","depth":2,"path":"resource/64_skill_store.md","ref":"resource/64_skill_store.md","articles":[]}]},"previous":{"title":"ping设备状态","level":"1.6.10","depth":2,"path":"resource/5A_ping.md","ref":"resource/5A_ping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/5B_nightmode.md","mtime":"2018-06-13T07:37:16.445Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-20T03:54:30.747Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>SDK 使用方式 · GitBook</title>
+        <title>SDK 初始化 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="11_pod_sdk.html" />
     
+    <link rel="prev" href="13_demo.html" />
     
 
     </head>
@@ -131,7 +131,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="10_use_sdk.html">
+        <li class="chapter " data-level="1.3.1" data-path="10_use_sdk.html">
             
                 <a href="10_use_sdk.html">
             
@@ -189,7 +189,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="14_sdk_init.html">
+        <li class="chapter active" data-level="1.3.3" data-path="14_sdk_init.html">
             
                 <a href="14_sdk_init.html">
             
@@ -754,7 +754,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >SDK 使用方式</a>
+        <a href=".." >SDK 初始化</a>
     </h1>
 </div>
 
@@ -769,13 +769,87 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rokid-mobile-sdk-ios&#x7248;-&#x4F7F;&#x7528;&#x65B9;&#x5F0F;">Rokid Mobile SDK iOS&#x7248; &#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h1>
-<h2 id="sdk&#x5BFC;&#x5165;&#x65B9;&#x5F0F;">SDK&#x5BFC;&#x5165;&#x65B9;&#x5F0F;</h2>
+                                <h1 id="sdk-&#x521D;&#x59CB;&#x5316;">SDK &#x521D;&#x59CB;&#x5316;</h1>
+<h2 id="1&#x3001;&#x521D;&#x59CB;&#x5316;">1&#x3001;&#x521D;&#x59CB;&#x5316;</h2>
 <ul>
-<li>&#x652F;&#x6301; <font color="red">Pod (&#x63A8;&#x8350;&#x4F7F;&#x7528;)</font> &#x548C; &#x624B;&#x52A8;&#x5BFC;&#x5165;</li>
-<li>&#x6682;&#x65F6;&#x53EA;&#x652F;&#x6301; Debug &#x7248;&#x672C;&#x7684; Framework &#x5305;</li>
-<li>&#x63D0;&#x4F9B;&#x4E86;&#x6D4B;&#x8BD5;&#x5DE5;&#x7A0B;&#xFF0C;&#x5728; RokidSDKDemo &#x4E0B;&#xFF0C;&#x5305;&#x62EC; Objc &#x548C; swift(&#x6682;&#x672A;&#x5B9E;&#x73B0;) &#x4E24;&#x4E2A;&#x7248;&#x672C;</li>
+<li><p>&#x5F02;&#x6B65;&#x521D;&#x59CB;&#x5316;RokidMobileSDK, &#x8BF7;&#x786E;&#x4FDD;&#x521D;&#x59CB;&#x5316;&#x6210;&#x529F;&#xFF0C;&#x5426;&#x5219;&#x5176;&#x4F59;API&#x90FD;&#x4F1A;&#x5931;&#x8D25;.</p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">appKey</td>
+<td>String</td>
+<td style="text-align:center">&#x662F;</td>
+<td>Rokid &#x53D1;&#x653E;&#x7684; appKey</td>
+</tr>
+<tr>
+<td style="text-align:left">appSecret</td>
+<td>String</td>
+<td style="text-align:center">&#x662F;</td>
+<td>Rokid &#x53D1;&#x653E;&#x7684; appSecret</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// complete: &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x679C;&#xFF0C;&#x6210;&#x529F;success = true, &#x5931;&#x8D25;success = false</span>
+<span class="hljs-type">RokidMobileSDK</span>.shared.initSDK(appKey: <span class="hljs-type">String</span>,
+                              appSecret: <span class="hljs-type">String</span>,
+                              escaping complete:(success: <span class="hljs-type">Bool</span>) -&gt; <span class="hljs-type">Void</span>)
+</code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc">[RokidMobileSDK.shared initSDKWithAppKey:<span class="hljs-string">&quot;xxx&quot;</span>
+                                   appSecret:<span class="hljs-string">&quot;xxx&quot;</span>
+                                   accessKey:<span class="hljs-string">&quot;xxx&quot;</span>
+                                  completion:^(RKError * error) {
+        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;[SDK init] result = %@&quot;</span>, error);
+
+        <span class="hljs-comment">// SDK init &#x5B8C;&#x6210;</span>
+        <span class="hljs-keyword">if</span> (!error) {
+            <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;SDK init success&quot;</span>);
+        };
+    }];
+</code></pre>
+<hr>
+<h2 id="2&#x3001;debug-&#x6A21;&#x5F0F;">2&#x3001;Debug &#x6A21;&#x5F0F;</h2>
+<p>&#x5F00;&#x542F; Debug &#x5F00;&#x53D1;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.shared.debug = <span class="hljs-literal">true</span>
+</code></pre>
+<p>Objc:</p>
+<pre><code class="lang-objc">RokidMobileSDK.shared.debug = <span class="hljs-literal">true</span>;
+</code></pre>
+<hr>
+<h2 id="3&#x3001;&#x5F00;&#x542F;&#x65E5;&#x5FD7;">3&#x3001;&#x5F00;&#x542F;&#x65E5;&#x5FD7;</h2>
+<font color="red">&#x6B64;API &#x672A;&#x542F;&#x7528;</font>
+
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-comment">// Log&#x9ED8;&#x8BA4;&#x5173;&#x95ED;</span>
+<span class="hljs-type">RokidMobileSDK</span>.log.enable = <span class="hljs-literal">true</span>;
+</code></pre>
+<pre><code>Log DEMO:
+
+RokidMobileSDK:&#x5F00;&#x59CB;SDK&#x521D;&#x59CB;&#x5316;&#xFF1A;appKey:xxxxxxxx, appSecret:yyyyyy
+RokidMobileSDK:&#x521D;&#x59CB;&#x5316;0:&#x5F00;&#x59CB;&#x9A8C;&#x8BC1;app...
+RokidMobileSDK:&#x521D;&#x59CB;&#x5316;1:&#x5F00;&#x59CB;&#x751F;&#x6210;&#x672C;&#x5730;&#x6743;&#x9650;...
+RokidMobileSDK:&#x521D;&#x59CB;&#x5316;0&#xFF1A;&#x6821;&#x9A8C;app&#x6210;&#x529F;&#xFF08;&#x5931;&#x8D25;,&#x5931;&#x8D25;&#x539F;&#x56E0;&#xFF1A;&#x65E0;&#x6548;&#x7F51;&#x7EDC;&#xFF09;
+RokidMobileSDK:&#x521D;&#x59CB;&#x5316;1:SDK&#x6743;&#x9650;&#x5DF2;&#x751F;&#x6210;&#xFF0C;&#x5177;&#x6709;&#x6743;&#x9650;&#xFF1A;&#x8D26;&#x6237;&#x7BA1;&#x7406;-true&#x3001;&#x8BBE;&#x5907;&#x7BA1;&#x7406;-true
+
+RokidMobileSDK: &#x5F00;&#x59CB;&#x767B;&#x9646;: userId:xxxxxxxx, token: yyyyyy
+RokidMobileSDK: &#x767B;&#x9646;&#x6210;&#x529F;(&#x5931;&#x8D25;, &#x5931;&#x8D25;&#x539F;&#x56E0;&#xFF1A;token&#x6821;&#x9A8C;&#x5931;&#x8D25;)
+</code></pre><hr>
 
                                 
                                 </section>
@@ -803,10 +877,10 @@
 
             
                 
-                
-                <a href="11_pod_sdk.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Pod引入">
-                    <i class="fa fa-angle-right"></i>
+                <a href="13_demo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Demo 代码">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -815,7 +889,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SDK 使用方式","level":"1.3.1","depth":2,"next":{"title":"Pod引入","level":"1.3.1.1","depth":3,"path":"resource/11_pod_sdk.md","ref":"resource/11_pod_sdk.md","articles":[]},"previous":{"title":"SDK 使用入门","level":"1.3","depth":1,"ref":"","articles":[{"title":"SDK 使用方式","level":"1.3.1","depth":2,"path":"resource/10_use_sdk.md","ref":"resource/10_use_sdk.md","articles":[{"title":"Pod引入","level":"1.3.1.1","depth":3,"path":"resource/11_pod_sdk.md","ref":"resource/11_pod_sdk.md","articles":[]},{"title":"手动导入","level":"1.3.1.2","depth":3,"path":"resource/12_manual_sdk.md","ref":"resource/12_manual_sdk.md","articles":[]}]},{"title":"Demo 代码","level":"1.3.2","depth":2,"path":"resource/13_demo.md","ref":"resource/13_demo.md","articles":[]},{"title":"SDK 初始化","level":"1.3.3","depth":2,"path":"resource/14_sdk_init.md","ref":"resource/14_sdk_init.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/10_use_sdk.md","mtime":"2018-05-22T02:43:08.829Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-20T03:54:30.747Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SDK 初始化","level":"1.3.3","depth":2,"next":{"title":"帐号模块 Account","level":"1.4","depth":1,"ref":"","articles":[{"title":"登录 Login","level":"1.4.1","depth":2,"path":"resource/31_token_login.md","ref":"resource/31_token_login.md","articles":[]},{"title":"登出 Logout","level":"1.4.2","depth":2,"path":"resource/32_logout.md","ref":"resource/32_logout.md","articles":[]},{"title":"帐号信息 Account Info","level":"1.4.3","depth":2,"path":"resource/33_account_info.md","ref":"resource/33_account_info.md","articles":[]}]},"previous":{"title":"Demo 代码","level":"1.3.2","depth":2,"path":"resource/13_demo.md","ref":"resource/13_demo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/14_sdk_init.md","mtime":"2018-03-11T08:00:47.910Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-20T03:54:30.747Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

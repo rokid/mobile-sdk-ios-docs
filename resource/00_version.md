@@ -1,5 +1,21 @@
 #  版本更新详情
 
+* v1.0.9
+
+    [新增] Vui sendMessage接口
+
+* v1.0.8
+
+    [修改] Account token login
+
+* v1.0.7 
+    
+    [新增] Web Bridge 接入说明
+
+* v1.0.6
+    
+    [新增] 闹钟、提醒 skill 接口
+
 * v1.0.5
     
     [修改] 增加asr纠错接口<br>
