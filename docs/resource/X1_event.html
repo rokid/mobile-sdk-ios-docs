@@ -495,6 +495,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.12" data-path="5B_nightmode.html">
+            
+                <a href="5B_nightmode.html">
+            
+                    
+                    夜间模式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -810,8 +823,32 @@
 <td>.ShouldLogout</td>
 <td>&#x88AB;&#x767B;&#x51FA;</td>
 </tr>
+<tr>
+<td>.ChannelMessage</td>
+<td>&#x957F;&#x8FDE;&#x63A5;&#x5B8C;&#x6574;&#x6D88;&#x606F;</td>
+</tr>
 </tbody>
 </table>
+<h2 id="&#x901A;&#x7528;&#x6D88;&#x606F;">&#x901A;&#x7528;&#x6D88;&#x606F;</h2>
+<h3 id="event&#x540D;&#x79F0;">event&#x540D;&#x79F0;</h3>
+<p>ChannelMessage</p>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<p>Swift:</p>
+<pre><code class="lang-swift"><span class="hljs-type">NotificationCenter</span>.rokidsdk.addObserver(<span class="hljs-keyword">self</span>, selector: #selector(handleChannelMsgsNotification(<span class="hljs-number">_</span>:)), name: <span class="hljs-type">NSNotification</span>.<span class="hljs-type">Name</span>(rawValue: <span class="hljs-type">SDKNotificationName</span>.<span class="hljs-type">ChannelMessages</span> ), object: <span class="hljs-literal">nil</span>)
+
+<span class="hljs-meta">@objc</span> <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">handleChannelMsgsNotification</span><span class="hljs-params">(<span class="hljs-number">_</span> notification: Notification)</span></span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;<span class="hljs-subst">\(String(describing: notification.userInfo)</span>)&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;handleChannelMsgsNotification:&quot;</span>, notification)
+}
+</code></pre>
+<p>Objc</p>
+<pre><code class="lang-objc">[<span class="hljs-built_in">NSNotificationCenter</span>.rokidsdk addObserver:<span class="hljs-keyword">self</span> selector:<span class="hljs-keyword">@selector</span>(handleChannelMsgsNotification:) name:SDKNotificationName.ChannelMessage object:<span class="hljs-literal">nil</span>];
+
+- (<span class="hljs-keyword">void</span>)handleChannelMsgsNotification: (<span class="hljs-built_in">NSNotification</span> *)notification {
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;%@&quot;</span>, notification.userInfo);
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;handleChannelMsgsNotification %@&quot;</span>, notification.object);
+}
+</code></pre>
 
                                 
                                 </section>
@@ -855,7 +892,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"消息 Event","level":"1.10","depth":1,"next":{"title":"服务协议","level":"1.11","depth":1,"path":"resource/Z0_service_agreement.md","ref":"resource/Z0_service_agreement.md","articles":[]},"previous":{"title":"发送 TOPIC","level":"1.9.4","depth":2,"path":"resource/84_topic.md","ref":"resource/84_topic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/X1_event.md","mtime":"2018-03-09T08:00:18.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-28T09:13:01.950Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"消息 Event","level":"1.10","depth":1,"next":{"title":"服务协议","level":"1.11","depth":1,"path":"resource/Z0_service_agreement.md","ref":"resource/Z0_service_agreement.md","articles":[]},"previous":{"title":"发送 TOPIC","level":"1.9.4","depth":2,"path":"resource/84_topic.md","ref":"resource/84_topic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/X1_event.md","mtime":"2018-07-06T09:40:02.748Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-06T09:40:14.123Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
