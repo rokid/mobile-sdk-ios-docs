@@ -40,8 +40,8 @@ SDKDeviceNightMode 对象结构如下:
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | state | SDKDeviceNightModeState | 是 | open: 打开夜间模式; </br> close: 关闭夜间模式 |
-| startTime | String | 是 | 设备ID |
-| endTime | String | 是 | 设备ID |
+| startTime | String | 是 | 开始时间 |
+| endTime | String | 是 | 终止时间 |
 
  **示例代码**：
  
