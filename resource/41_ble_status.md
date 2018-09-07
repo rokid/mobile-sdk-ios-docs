@@ -1,4 +1,5 @@
 # 配网模块 Binder
+
 ## 1、获取蓝牙开启状态,未授权时先授权再check
 
 **示例代码**
@@ -6,41 +7,26 @@
 Swift:
 
 ```swift
-RokidMobileSDK.binder.getBLEStatus()
+RokidMobileSDK.binder.enableBLE()
 ```
 
 Objc:
 
 ```objc
-CBCentralManagerState state = [RokidMobileSDK.binder getBLEStatus];
+CBCentralManagerState state = [RokidMobileSDK.binder enableBLE];
 ```
 
 ---
 
-## 2、监听蓝牙状态改变
-
-**参数说明**
-
-| 字段    | 类型   | 必须？| 说明 |
-| ------ | ----- | ----- | ----- |
-| statusChange | CBCentralManagerState) -> Void | 是 | 状态改变回调 |
-
-**示例代码**
+在 SDKBinderObserver 实现类中的 onBLEEnabled() 函数 获取蓝牙开启状态。
 
 Swift:
 
 ```swift
-RokidMobileSDK.binder.onBLEStatusChange(statusChange: @escaping (CBCentralManagerState) -> Void)
+// 手机蓝牙状态变更，用户是开起来了蓝牙功能
+func onBLEEnabled(_ isEnable: Bool) {
+    self.sdkObservers.forEach({$0.value?.onBLEEnabled?(isEnable)})
+}
 ```
-
-Objc:
-
-```objc
-[RokidMobileSDK.binder onBLEStatusChangeWithStatusChange:^(CBCentralManagerState state) {
-    //...
-}];
-```
-
----
 
 

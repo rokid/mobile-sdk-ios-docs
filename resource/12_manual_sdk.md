@@ -23,10 +23,10 @@ Demo 工程中提供了 Podfile，里面已经写好了依赖的工程
   pod 'SQLite.swift', '~> 0.11.4'
   pod 'ProtocolBuffers-Swift', '3.0.23'
   pod 'CocoaAsyncSocket', '7.6.0'
-  pod 'Starscream', '2.0.3'
   pod 'ReachabilitySwift', '4.1.0'
   pod 'AFNetworking', '2.6.3'
-  pod 'MQTTClient'
+  pod 'MQTTClient', '0.14.0'
+  pod 'Alamofire', '4.7.3'
 ```
 
 ## 3、导入 SDK

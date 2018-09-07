@@ -1,30 +1,27 @@
 # 配网模块 Binder
 ## 连接设备
 
-**接口说明** 接口需传入蓝牙名称（蓝牙address重启后会变）
+**接口说明** 
+用于连接 扫描出来的蓝牙设备。
 
 **参数说明**
 
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
-| name | String | 是 | 设备名称 |
+| device | RKBLEDevice | 是 | 蓝牙设备 |
 
 **示例代码**
 
 Swift:
 
 ```swift
-RokidMobileSDK.binder.connectBLEDevice(device: RKBLEDevice, complete:(RKError?)->Void) {
-    // ...
-}
+RokidMobileSDK.binder.connect(device: RKBLEDevice)
 ```
 
 Objc:
 
 ```objc
-[RokidMobileSDK.binder connectBLEDevice:device complete:^(BOOL result, NSError * error) {
-    // ...
-}];
+[RokidMobileSDK.binder connect:device];
 ```
 
 ---

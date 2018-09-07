@@ -64,6 +64,8 @@
     <link rel="next" href="42_ble_scan.html" />
     
     
+    <link rel="prev" href="40_ble.html" />
+    
 
     </head>
     <body>
@@ -279,7 +281,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.1" data-path="41_ble_status.html">
+        <li class="chapter " data-level="1.5.1" data-path="40_ble.html">
+            
+                <a href="40_ble.html">
+            
+                    
+                    蓝牙配网说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="41_ble_status.html">
             
                 <a href="41_ble_status.html">
             
@@ -292,7 +307,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="42_ble_scan.html">
+        <li class="chapter " data-level="1.5.3" data-path="42_ble_scan.html">
             
                 <a href="42_ble_scan.html">
             
@@ -305,7 +320,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="43_ble_connect.html">
+        <li class="chapter " data-level="1.5.4" data-path="43_ble_connect.html">
             
                 <a href="43_ble_connect.html">
             
@@ -318,12 +333,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="44_ble_send_data.html">
+        <li class="chapter " data-level="1.5.5" data-path="44_ble_send_data.html">
             
                 <a href="44_ble_send_data.html">
             
                     
-                    发送配网数据
+                    设备配网
             
                 </a>
             
@@ -786,42 +801,19 @@
 <h2 id="1&#x3001;&#x83B7;&#x53D6;&#x84DD;&#x7259;&#x5F00;&#x542F;&#x72B6;&#x6001;&#x672A;&#x6388;&#x6743;&#x65F6;&#x5148;&#x6388;&#x6743;&#x518D;check">1&#x3001;&#x83B7;&#x53D6;&#x84DD;&#x7259;&#x5F00;&#x542F;&#x72B6;&#x6001;,&#x672A;&#x6388;&#x6743;&#x65F6;&#x5148;&#x6388;&#x6743;&#x518D;check</h2>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.binder.getBLEStatus()
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.binder.enableBLE()
 </code></pre>
 <p>Objc:</p>
-<pre><code class="lang-objc">CBCentralManagerState state = [RokidMobileSDK.binder getBLEStatus];
+<pre><code class="lang-objc">CBCentralManagerState state = [RokidMobileSDK.binder enableBLE];
 </code></pre>
 <hr>
-<h2 id="2&#x3001;&#x76D1;&#x542C;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x6539;&#x53D8;">2&#x3001;&#x76D1;&#x542C;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x6539;&#x53D8;</h2>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5B57;&#x6BB5;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x987B;&#xFF1F;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>statusChange</td>
-<td>CBCentralManagerState) -&gt; Void</td>
-<td>&#x662F;</td>
-<td>&#x72B6;&#x6001;&#x6539;&#x53D8;&#x56DE;&#x8C03;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<p>&#x5728; SDKBinderObserver &#x5B9E;&#x73B0;&#x7C7B;&#x4E2D;&#x7684; onBLEEnabled() &#x51FD;&#x6570; &#x83B7;&#x53D6;&#x84DD;&#x7259;&#x5F00;&#x542F;&#x72B6;&#x6001;&#x3002;</p>
 <p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.binder.onBLEStatusChange(statusChange: @escaping (<span class="hljs-type">CBCentralManagerState</span>) -&gt; <span class="hljs-type">Void</span>)
+<pre><code class="lang-swift"><span class="hljs-comment">// &#x624B;&#x673A;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#xFF0C;&#x7528;&#x6237;&#x662F;&#x5F00;&#x8D77;&#x6765;&#x4E86;&#x84DD;&#x7259;&#x529F;&#x80FD;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">onBLEEnabled</span><span class="hljs-params">(<span class="hljs-number">_</span> isEnable: Bool)</span></span> {
+    <span class="hljs-keyword">self</span>.sdkObservers.forEach({$<span class="hljs-number">0</span>.value?.onBLEEnabled?(isEnable)})
+}
 </code></pre>
-<p>Objc:</p>
-<pre><code class="lang-objc">[RokidMobileSDK.binder onBLEStatusChangeWithStatusChange:^(CBCentralManagerState state) {
-    <span class="hljs-comment">//...</span>
-}];
-</code></pre>
-<hr>
 
                                 
                                 </section>
@@ -849,8 +841,12 @@
 
             
                 
+                <a href="40_ble.html" class="navigation navigation-prev " aria-label="Previous page: 蓝牙配网说明">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="42_ble_scan.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 蓝牙扫描">
+                
+                <a href="42_ble_scan.html" class="navigation navigation-next " aria-label="Next page: 蓝牙扫描">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -861,7 +857,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"蓝牙状态","level":"1.5.1","depth":2,"next":{"title":"蓝牙扫描","level":"1.5.2","depth":2,"path":"resource/42_ble_scan.md","ref":"resource/42_ble_scan.md","articles":[]},"previous":{"title":"配网模块 Binder","level":"1.5","depth":1,"ref":"","articles":[{"title":"蓝牙状态","level":"1.5.1","depth":2,"path":"resource/41_ble_status.md","ref":"resource/41_ble_status.md","articles":[]},{"title":"蓝牙扫描","level":"1.5.2","depth":2,"path":"resource/42_ble_scan.md","ref":"resource/42_ble_scan.md","articles":[]},{"title":"连接蓝牙","level":"1.5.3","depth":2,"path":"resource/43_ble_connect.md","ref":"resource/43_ble_connect.md","articles":[]},{"title":"发送配网数据","level":"1.5.4","depth":2,"path":"resource/44_ble_send_data.md","ref":"resource/44_ble_send_data.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/41_ble_status.md","mtime":"2018-03-11T08:01:24.643Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-19T08:44:06.915Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"蓝牙状态","level":"1.5.2","depth":2,"next":{"title":"蓝牙扫描","level":"1.5.3","depth":2,"path":"resource/42_ble_scan.md","ref":"resource/42_ble_scan.md","articles":[]},"previous":{"title":"蓝牙配网说明","level":"1.5.1","depth":2,"path":"resource/40_ble.md","ref":"resource/40_ble.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/41_ble_status.md","mtime":"2018-09-07T14:05:08.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T14:28:24.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

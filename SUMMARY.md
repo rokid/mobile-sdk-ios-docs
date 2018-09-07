@@ -13,10 +13,11 @@
     * [登出 Logout](resource/32_logout.md)
     * [帐号信息 Account Info](resource/33_account_info.md)
 * 配网模块 Binder
+    * [蓝牙配网说明](resource/40_ble.md)
     * [蓝牙状态](resource/41_ble_status.md)
     * [蓝牙扫描](resource/42_ble_scan.md)
     * [连接蓝牙](resource/43_ble_connect.md)
-    * [发送配网数据](resource/44_ble_send_data.md)
+    * [设备配网](resource/44_ble_send_data.md)
 * 设备模块 Device
     * [设备列表](resource/51_device_list.md)
     * [设备基本信息](resource/52_device_base_info.md)

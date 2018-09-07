@@ -5,23 +5,23 @@
 
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
-| type | String | 是 | 设备名称类型前缀 |
+| blePrefix | String | 是 | 设备名称类型前缀 |
 
 **示例代码**
 
 Swift:
 
 ```swift
-RokidMobileSDK.binder.startBLEScan(type: String, onNewDeviceCallback: (BTDevice)->Void) ->RKError?
+RokidMobileSDK.binder.startBLEScan(blePrefix: String) ->Bool
 ```
 
 Objc:
 
 ```objc
-[RokidMobileSDK.binder startBLEScanWithType:@"Rokid-Pebble-" onDeviceChange:^(NSArray<RKBLEDevice *> * devices) {
-    //...
-}];
+[RokidMobileSDK.binder startBLEScanWithBlePrefix:@"Rokid-"];
 ```
+
+<font color="red">手机蓝牙未打开时，扫描接口会返回 false</font>
 
 ---
 
@@ -32,13 +32,13 @@ Objc:
 Swift:
 
 ```swift
-RokidMobileSDK.binder.stopBLEScan()
+RokidMobileSDK.binder.stopScan()
 ```
 
 Objc:
 
 ```objc
-[RokidMobileSDK.binder stopBLEScan]
+[RokidMobileSDK.binder stopScan]
 ```
 
 ---

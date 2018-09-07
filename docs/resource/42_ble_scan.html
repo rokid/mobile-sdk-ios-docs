@@ -281,7 +281,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="41_ble_status.html">
+        <li class="chapter " data-level="1.5.1" data-path="40_ble.html">
+            
+                <a href="40_ble.html">
+            
+                    
+                    蓝牙配网说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="41_ble_status.html">
             
                 <a href="41_ble_status.html">
             
@@ -294,7 +307,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="42_ble_scan.html">
+        <li class="chapter active" data-level="1.5.3" data-path="42_ble_scan.html">
             
                 <a href="42_ble_scan.html">
             
@@ -307,7 +320,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="43_ble_connect.html">
+        <li class="chapter " data-level="1.5.4" data-path="43_ble_connect.html">
             
                 <a href="43_ble_connect.html">
             
@@ -320,12 +333,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="44_ble_send_data.html">
+        <li class="chapter " data-level="1.5.5" data-path="44_ble_send_data.html">
             
                 <a href="44_ble_send_data.html">
             
                     
-                    发送配网数据
+                    设备配网
             
                 </a>
             
@@ -798,7 +811,7 @@
 </thead>
 <tbody>
 <tr>
-<td>type</td>
+<td>blePrefix</td>
 <td>String</td>
 <td>&#x662F;</td>
 <td>&#x8BBE;&#x5907;&#x540D;&#x79F0;&#x7C7B;&#x578B;&#x524D;&#x7F00;</td>
@@ -807,21 +820,21 @@
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.binder.startBLEScan(type: <span class="hljs-type">String</span>, onNewDeviceCallback: (<span class="hljs-type">BTDevice</span>)-&gt;<span class="hljs-type">Void</span>) -&gt;<span class="hljs-type">RKError</span>?
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.binder.startBLEScan(blePrefix: <span class="hljs-type">String</span>) -&gt;<span class="hljs-type">Bool</span>
 </code></pre>
 <p>Objc:</p>
-<pre><code class="lang-objc">[RokidMobileSDK.binder startBLEScanWithType:<span class="hljs-string">@&quot;Rokid-Pebble-&quot;</span> onDeviceChange:^(<span class="hljs-built_in">NSArray</span>&lt;RKBLEDevice *&gt; * devices) {
-    <span class="hljs-comment">//...</span>
-}];
+<pre><code class="lang-objc">[RokidMobileSDK.binder startBLEScanWithBlePrefix:<span class="hljs-string">@&quot;Rokid-&quot;</span>];
 </code></pre>
+<font color="red">&#x624B;&#x673A;&#x84DD;&#x7259;&#x672A;&#x6253;&#x5F00;&#x65F6;&#xFF0C;&#x626B;&#x63CF;&#x63A5;&#x53E3;&#x4F1A;&#x8FD4;&#x56DE; false</font>
+
 <hr>
 <h2 id="&#x505C;&#x6B62;&#x84DD;&#x7259;&#x626B;&#x63CF;">&#x505C;&#x6B62;&#x84DD;&#x7259;&#x626B;&#x63CF;</h2>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.binder.stopBLEScan()
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.binder.stopScan()
 </code></pre>
 <p>Objc:</p>
-<pre><code class="lang-objc">[RokidMobileSDK.binder stopBLEScan]
+<pre><code class="lang-objc">[RokidMobileSDK.binder stopScan]
 </code></pre>
 <hr>
 
@@ -867,7 +880,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"蓝牙扫描","level":"1.5.2","depth":2,"next":{"title":"连接蓝牙","level":"1.5.3","depth":2,"path":"resource/43_ble_connect.md","ref":"resource/43_ble_connect.md","articles":[]},"previous":{"title":"蓝牙状态","level":"1.5.1","depth":2,"path":"resource/41_ble_status.md","ref":"resource/41_ble_status.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/42_ble_scan.md","mtime":"2018-03-11T08:01:42.706Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-19T08:44:06.915Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"蓝牙扫描","level":"1.5.3","depth":2,"next":{"title":"连接蓝牙","level":"1.5.4","depth":2,"path":"resource/43_ble_connect.md","ref":"resource/43_ble_connect.md","articles":[]},"previous":{"title":"蓝牙状态","level":"1.5.2","depth":2,"path":"resource/41_ble_status.md","ref":"resource/41_ble_status.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/42_ble_scan.md","mtime":"2018-09-07T13:56:06.032Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T14:28:24.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
