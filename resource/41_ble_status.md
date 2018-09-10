@@ -13,7 +13,7 @@ RokidMobileSDK.binder.enableBLE()
 Objc:
 
 ```objc
-CBCentralManagerState state = [RokidMobileSDK.binder enableBLE];
+[RokidMobileSDK.binder enableBLE];
 ```
 
 ---
