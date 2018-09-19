@@ -30,7 +30,7 @@
     * [设备解绑](resource/59_unbind.md)
     * [ping设备状态](resource/5A_ping.md)
     * [夜间模式](resource/5B_nightmode.md)
-    * [夜间模式](resource/5B_nightmode.md)
+    * [设备自定义信息](resource/5Z_custom_info.md)
 * 技能模块 Skill
     * [闹钟](resource/61_alarm.md)
     * [提醒](resource/62_remind.md)
