@@ -2,21 +2,23 @@
 
 * [Rokid Mobile SDK](README.md)
 * [修订记录](resource/00_version.md)
-* SDK 使用入门
-    * [SDK 使用方式](resource/10_use_sdk.md)
-        * [Pod引入](resource/11_pod_sdk.md)
-        * [手动导入](resource/12_manual_sdk.md)
-    * [Demo 代码](resource/13_demo.md)
-    * [SDK 初始化](resource/14_sdk_init.md)
+* 快速接入
+    * [Pod引入](resource/11_pod_sdk.md)
+    * [手动导入](resource/12_manual_sdk.md)
+    * [SDK 初始化](resource/13_sdk_init.md)
+    * [调试](resource/14_debug.md)
+    * [Demo 工程](resource/1Z_demo.md)
 * 帐号模块 Account
-    * [登录 Login](resource/31_token_login.md)
-    * [登出 Logout](resource/32_logout.md)
-    * [帐号信息 Account Info](resource/33_account_info.md)
-* 配网模块 Binder
-    * [蓝牙配网说明](resource/40_ble.md)
-    * [蓝牙状态](resource/41_ble_status.md)
-    * [蓝牙扫描](resource/42_ble_scan.md)
-    * [连接蓝牙](resource/43_ble_connect.md)
+    * [账号模块介绍](resource/30_account.md)
+    * [若琪账号体系](resource/31_rokid_login.md)
+    * [自有账号体系](resource/32_thirdparty_login.md)
+    * [账号登出](resource/33_logout.md)
+    * [帐号信息](resource/34_account_info.md)
+* 绑定模块 Binder
+    * [绑定模块介绍](resource/40_ble.md)
+    * [手机蓝牙状态](resource/41_ble_status.md)
+    * [设备蓝牙扫描](resource/42_ble_scan.md)
+    * [连接设备蓝牙](resource/43_ble_connect.md)
     * [设备配网](resource/44_ble_send_data.md)
 * 设备模块 Device
     * [设备列表](resource/51_device_list.md)
@@ -29,7 +31,7 @@
     * [恢复出厂设置](resource/58_reset.md)
     * [设备解绑](resource/59_unbind.md)
     * [ping设备状态](resource/5A_ping.md)
-    * [夜间模式](resource/5B_nightmode.md)
+    * [设备夜间模式](resource/5B_nightmode.md)
     * [设备自定义信息](resource/5Z_custom_info.md)
 * 技能模块 Skill
     * [闹钟](resource/61_alarm.md)
@@ -40,10 +42,13 @@
     * [快速接入](resource/71_use_webbridge.md)
 * Vui 反馈 模块
     * [Card 列表](resource/81_card_list.md)
-    * [发送 ASR及纠错](resource/82_asr.md)
-    * [发送 TTS](resource/83_tts.md)
-    * [发送 TOPIC](resource/84_topic.md)
-* [消息 Event](resource/X1_event.md)
+    * [发送 ASR及纠错](resource/84_asr.md)
+    * [发送 TTS](resource/85_tts.md)
+    * [发送 TOPIC](resource/86_topic.md)
+* 通知中心 Notification
+    * [通知介绍](resource/X1_event.md)
+    * [通用通知](resource/X2_channel_message.md)
+* [FAQ](https://github.com/Rokid/RokidMobileSDKiOSDemo/issues)
 * [服务协议](resource/Z0_service_agreement.md)
 * [免责声明](resource/Z1_community_disclaimer.md)
 * [Rokid 讨论区](https://developer-forum.rokid.com)

@@ -1,5 +1,6 @@
 # 设备模块 Device
-## 1、获取设备的 Loaction 信息
+
+## 获取设备的 Loaction 信息
 
 **参数说明**
 
@@ -18,7 +19,7 @@ RokidMobileSDK.device.getLocation(deviceId: String, completion: @escaping (_ err
 
 ---
 
-## 2、更新设备的 Location 信息
+## 更新设备的 Location 信息
 
 **参数说明**
 

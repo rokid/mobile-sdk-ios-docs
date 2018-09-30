@@ -1,8 +1,20 @@
-# 蓝牙配网说明
+# 绑定模块 Binder
 
-## 模式
+### 绑定模式
 
-Rokid Mobile SDK 蓝牙配网 API，使用观察者模式，所以使用之前，请 实现如下接口，并添加到 RokidMobileSDK.binder 中。
+绑定模块 主要提供给 搭载了 Rokid服务的设备进行配置网络环境。
+
+Mobile SDK 提供了蓝牙配网 API，使用观察者模式，所以使用之前，请 实现如下接口，并添加到 RokidMobileSDK.binder 中。
+
+请确认 APP 是否开通蓝牙权限。
+
+### 配网流程
+
+![](images/binder.png)
+
+### 配网模块观察者
+
+实现这个观察者可以获取整个配网过程中的回调和状态。
 
 **示例代码**
 

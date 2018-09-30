@@ -1,6 +1,6 @@
 # 设备配置信息 Device
 
-## 1、获取设备配置信息
+## 获取设备配置信息
 
 根据业务需求获取设备 配置的各种信息。
 
@@ -23,7 +23,7 @@ RokidMobileSDK.device.getServiceInfo(device: RKDevice, namespace: String,
                                      }
 ```
 
-## 2、存储、更新设备信息
+## 存储、更新设备信息
 
 | 字段 | 类型 | 必须 | 备注 |
 | --- | --- | --- | --- |
