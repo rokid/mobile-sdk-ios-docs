@@ -65,6 +65,7 @@ public class CustomBinderObserver: SDKBinderObserver {
 | -12 | wifi连接超时 ||
 | -13 | 没找到当前wifi ||
 | -14 | wifi密码长度不正确 ||
+| -98 | 运营商网络错误 ||
 | 100 | 登录中 ||
 | 101 | 登录成功 ||
 | -101 | 登录失败 ||
