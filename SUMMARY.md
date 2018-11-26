@@ -40,6 +40,11 @@
     * [技能商店](resource/64_skill_store.md)
 * WebBridge
     * [快速接入](resource/71_use_webbridge.md)
+* 媒体模块
+    * [授权媒体技能](resource/91_media_skilllist.md)
+    * [媒体技能页面](resource/92_media_display.md)
+    * [媒体技能播控](resource/93_media_control.md)
+    * [第三方授权](resource/94_media_thridauth.md)
 * Vui 反馈 模块
     * [Card 列表](resource/81_card_list.md)
     * [发送 ASR及纠错](resource/84_asr.md)

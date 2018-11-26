@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>技能商店 · GitBook</title>
+        <title>第三方授权 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,7 +62,7 @@
 
     
     
-    <link rel="prev" href="63_homebase.html" />
+    <link rel="prev" href="93_media_control.html" />
     
 
     </head>
@@ -597,7 +597,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.4" data-path="64_skill_store.html">
+        <li class="chapter " data-level="1.7.4" data-path="64_skill_store.html">
             
                 <a href="64_skill_store.html">
             
@@ -700,7 +700,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="94_media_thridauth.html">
+        <li class="chapter active" data-level="1.9.4" data-path="94_media_thridauth.html">
             
                 <a href="94_media_thridauth.html">
             
@@ -916,7 +916,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >技能商店</a>
+        <a href=".." >第三方授权</a>
     </h1>
 </div>
 
@@ -931,11 +931,272 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6280;&#x80FD;&#x5546;&#x5E97;-h5">&#x6280;&#x80FD;&#x5546;&#x5E97; H5</h1>
-<h2 id="url">URL</h2>
-<ul>
-<li>release&#x73AF;&#x5883;&#xFF1A; <a href="https://skill.rokid.com/storev2" target="_blank">https://skill.rokid.com/storev2</a></li>
-</ul>
+                                <h1 id="&#x5A92;&#x4F53;&#x6A21;&#x5757;">&#x5A92;&#x4F53;&#x6A21;&#x5757;</h1>
+<h2 id="&#x6388;&#x6743;&#x6D41;&#x7A0B;">&#x6388;&#x6743;&#x6D41;&#x7A0B;</h2>
+<h3 id="&#x6D41;&#x7A0B;&#x8BF4;&#x660E;">&#x6D41;&#x7A0B;&#x8BF4;&#x660E;</h3>
+<p>&#x65F6;&#x5E8F;&#x56FE;&#xFF1A;
+<img src="images/media_thirdauth.jpg" alt=""></p>
+<h3 id="&#x4E09;&#x65B9;&#x6388;&#x6743;-sdk-&#x6587;&#x6863;">&#x4E09;&#x65B9;&#x6388;&#x6743; SDK &#x6587;&#x6863;</h3>
+<p>QQ SDK &#x6587;&#x6863;&#xFF1A; <a href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5" target="_blank">&#x70B9;&#x51FB;&#x67E5;&#x770B;</a></p>
+<p>&#x5FAE;&#x4FE1;SDK &#x6587;&#x6863;&#xFF1A;<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419317851&amp;token=d0068cccc332e748ea5a18522d8348e872953c88&amp;lang=zh_CN" target="_blank">&#x70B9;&#x51FB;&#x67E5;&#x770B;</a></p>
+<p>&#x559C;&#x9A6C;&#x62C9;&#x96C5; &#x6587;&#x6863;&#xFF1A;<a href="http://open.ximalaya.com/doc/sdk-access" target="_blank">&#x70B9;&#x51FB;&#x67E5;&#x770B;</a></p>
+<hr>
+<h3 id="&#x83B7;&#x53D6;&#x5DF2;&#x6388;&#x6743;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x5DF2;&#x6388;&#x6743;&#x4FE1;&#x606F;</h3>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>ThirdAuth</td>
+<td>&#x662F;</td>
+<td>&#x83B7;&#x53D6;&#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x6807;&#x8BC6;&#x3002;<br>&#x5982;&#xFF1A;SDKThirdAuthType.QQ&#x3001;SDKThirdAuthType.WX</td>
+</tr>
+<tr>
+<td>deviceTypeId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td>deviceId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;SN</td>
+</tr>
+</tbody>
+</table>
+<p>SDKThirdAuthToken &#x8BF4;&#x660E;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x6388;&#x6743; Token</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x6709;&#x6548;&#x671F;</td>
+</tr>
+<tr>
+<td>refresh_token</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5237;&#x65B0;&#x6240;&#x9700; Token</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x83B7;&#x53D6;&#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x6807;&#x8BC6;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E3E;&#x4E2A;&#x5927;&#x6817;&#x5B50;</p>
+<p>Swift</p>
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.media?.getThirdOauthToken(type: <span class="hljs-type">SDKThirdAuthType</span>.<span class="hljs-type">QQ</span>, deviceTypeId: <span class="hljs-string">&quot;$deviceTypeId&quot;</span>, deviceId: <span class="hljs-string">&quot;$deviceId&quot;</span> , completion: { (error, thirdAuthToken) <span class="hljs-keyword">in</span>
+    <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+<hr>
+<h3 id="&#x83B7;&#x53D6;-&#x4E09;&#x65B9;&#x5E73;&#x53F0;&#x6388;&#x6743;&#x6240;&#x9700;&#x4FE1;&#x606F;">&#x83B7;&#x53D6; &#x4E09;&#x65B9;&#x5E73;&#x53F0;&#x6388;&#x6743;&#x6240;&#x9700;&#x4FE1;&#x606F;</h3>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>ThirdAuth</td>
+<td>&#x662F;</td>
+<td>&#x83B7;&#x53D6;&#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x6807;&#x8BC6;&#x3002;<br>&#x5982;&#xFF1A;SDKThirdAuthType.QQ&#x3001;SDKThirdAuthType.WX</td>
+</tr>
+<tr>
+<td>deviceTypeId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;&#x7C7B;&#x578B;</td>
+</tr>
+</tbody>
+</table>
+<p>ThirdOauthInfoBean &#x8BF4;&#x660E;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baseAppId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;&#x7533;&#x8BF7;&#x7684; AppId</td>
+</tr>
+<tr>
+<td>baseAppSecret</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;&#x7533;&#x8BF7;&#x7684; AppSecret</td>
+</tr>
+<tr>
+<td>baseRedirectUri</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x6388;&#x6743;&#x5B8C;&#x6210;&#xFF0C;&#x4FE1;&#x606F;&#x4E0A;&#x62A5;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>callbackThirdUrl</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x6388;&#x6743;&#x5B8C;&#x6210;&#xFF0C;&#x56DE;&#x8C03;&#x5730;&#x5740;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E3E;&#x4E2A;&#x5927;&#x6817;&#x5B50;</p>
+<p>Swift</p>
+<pre><code class="lang-Swift"><span class="hljs-type">RokidMobileSDK</span>.media?.getThirdOauthInfo(type: <span class="hljs-type">SDKThirdAuthType</span>.<span class="hljs-type">QQ</span>, deviceTypeId: <span class="hljs-string">&quot;$deviceTypeId&quot;</span>, completion: { (error, thirdAuthInfo) <span class="hljs-keyword">in</span>
+    <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+<hr>
+<h3 id="&#x89E3;&#x9664;&#x7ED1;&#x5B9A;">&#x89E3;&#x9664;&#x7ED1;&#x5B9A;</h3>
+<p>&#x89E3;&#x7ED1; &#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>ThirdAuth</td>
+<td>&#x662F;</td>
+<td>&#x83B7;&#x53D6;&#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x6807;&#x8BC6;&#x3002;<br>&#x5982;&#xFF1A;SDKThirdAuthType.QQ&#x3001;SDKThirdAuthType.WX</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E3E;&#x4E2A;&#x5927;&#x6817;&#x5B50;</p>
+<p>Swift</p>
+<pre><code class="lang-Swift"><span class="hljs-type">RokidMobileSDK</span>.media?.unbindThirdAuth(<span class="hljs-type">SDKThirdAuthType</span>.<span class="hljs-type">QQ</span>, completion: { (error) <span class="hljs-keyword">in</span>
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<hr>
+<h3 id="&#x4E0A;&#x62A5;-qq-&#x6388;&#x6743;&#x4FE1;&#x606F;">&#x4E0A;&#x62A5; QQ &#x6388;&#x6743;&#x4FE1;&#x606F;</h3>
+<p>QQ &#x8D26;&#x53F7;&#x6388;&#x6743;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x4E0A;&#x62A5;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>info</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>QQ SDK &#x8FD4;&#x56DE;&#x7684;&#x6388;&#x6743;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>thirdOauthInfoBean</td>
+<td>SDKThirdAuthInfo</td>
+<td>&#x662F;</td>
+<td>&#x4E0A;&#x9762; &#x4E09;&#x65B9;&#x4FE1;&#x606F;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5B9E;&#x4F53;</td>
+</tr>
+<tr>
+<td>deviceTypeId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;&#x7C7B;&#x578B;Id</td>
+</tr>
+</tbody>
+</table>
+<p>Swift</p>
+<pre><code class="lang-Swift"><span class="hljs-keyword">let</span> info = [<span class="hljs-string">&quot;openid&quot;</span>: validAuth.openId, <span class="hljs-comment">// QQ SDK &#x8FD4;&#x56DE;&#x7684; Openid</span>
+               <span class="hljs-string">&quot;access_token&quot;</span>: validAuth.accessToken, <span class="hljs-comment">// QQ SDK &#x8FD4;&#x56DE;&#x7684; Access_token</span>
+                <span class="hljs-string">&quot;expires_in&quot;</span>: lround(validAuth.expirationDate.timeIntervalSince1970)] <span class="hljs-keyword">as</span> [<span class="hljs-type">String</span> : <span class="hljs-type">Any</span>]  <span class="hljs-comment">// QQ SDK &#x8FD4;&#x56DE;&#x7684;tExpires_in</span>
+<span class="hljs-keyword">let</span> infoString = <span class="hljs-keyword">try</span>! <span class="hljs-type">RBJSONString</span>(info) <span class="hljs-comment">// &#x8BF7;&#x4F7F;&#x7528; &#x81EA;&#x5DF1;&#x5DE5;&#x7A0B;&#x4E2D;&#x7684;&#x5DE5;&#x5177;&#x7C7B; &#x8F6C;&#x6210; JsonString</span>
+
+<span class="hljs-type">RokidMobileSDK</span>.media?.uploadQQBindInfo(info: infoString, thirdAuthInfo: thirdAuthInfo, deviceTypeId: deviceTypeId) { (error) <span class="hljs-keyword">in</span>
+    <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+<hr>
+<h3 id="&#x4E0A;&#x62A5;-&#x5FAE;&#x4FE1;-&#x6388;&#x6743;&#x4FE1;&#x606F;">&#x4E0A;&#x62A5; &#x5FAE;&#x4FE1; &#x6388;&#x6743;&#x4FE1;&#x606F;</h3>
+<p>&#x5FAE;&#x4FE1; &#x8D26;&#x53F7;&#x6388;&#x6743;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x4E0A;&#x62A5;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>UploadInfoBean</td>
+<td>&#x662F;</td>
+<td>&#x5FAE;&#x4FE1; SDK &#x8FD4;&#x56DE;&#x7684;&#x6388;&#x6743;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>thirdOauthInfoBean</td>
+<td>ThirdOauthInfoBean</td>
+<td>&#x662F;</td>
+<td>&#x4E0A;&#x9762; &#x4E09;&#x65B9;&#x4FE1;&#x606F;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5B9E;&#x4F53;</td>
+</tr>
+<tr>
+<td>deviceTypeId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;&#x7C7B;&#x578B;Id</td>
+</tr>
+</tbody>
+</table>
+<p>Swift</p>
+<pre><code class="lang-Swift"><span class="hljs-type">RokidMobileSDK</span>.media?.uploadWXBindInfo(code, thirdOauthInfoBean, deviceTypeId) { (error) <span class="hljs-keyword">in</span>
+    <span class="hljs-comment">// ...</span>
+})
+</code></pre>
 
                                 
                                 </section>
@@ -963,7 +1224,7 @@
 
             
                 
-                <a href="63_homebase.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 智能家居">
+                <a href="93_media_control.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 媒体技能播控">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -975,7 +1236,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"技能商店","level":"1.7.4","depth":2,"next":{"title":"WebBridge","level":"1.8","depth":1,"ref":"","articles":[{"title":"快速接入","level":"1.8.1","depth":2,"path":"resource/71_use_webbridge.md","ref":"resource/71_use_webbridge.md","articles":[]}]},"previous":{"title":"智能家居","level":"1.7.3","depth":2,"path":"resource/63_homebase.md","ref":"resource/63_homebase.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/64_skill_store.md","mtime":"2018-09-30T16:34:23.147Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T17:35:40.274Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第三方授权","level":"1.9.4","depth":2,"next":{"title":"Vui 反馈 模块","level":"1.10","depth":1,"ref":"","articles":[{"title":"Card 列表","level":"1.10.1","depth":2,"path":"resource/81_card_list.md","ref":"resource/81_card_list.md","articles":[]},{"title":"发送 ASR及纠错","level":"1.10.2","depth":2,"path":"resource/84_asr.md","ref":"resource/84_asr.md","articles":[]},{"title":"发送 TTS","level":"1.10.3","depth":2,"path":"resource/85_tts.md","ref":"resource/85_tts.md","articles":[]},{"title":"发送 TOPIC","level":"1.10.4","depth":2,"path":"resource/86_topic.md","ref":"resource/86_topic.md","articles":[]}]},"previous":{"title":"媒体技能播控","level":"1.9.3","depth":2,"path":"resource/93_media_control.md","ref":"resource/93_media_control.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/94_media_thridauth.md","mtime":"2018-12-04T17:35:14.580Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T17:35:40.274Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
