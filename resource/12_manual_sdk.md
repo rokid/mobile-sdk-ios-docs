@@ -24,20 +24,13 @@ source 'https://github.com/aliyun/aliyun-specs.git'
 
 ...
 
-pod 'AliyunOSSiOS', '2.1.2'
-pod 'SQLite.swift', '~> 0.11.4'
-pod 'ProtocolBuffers-Swift', '3.0.23'
+pod 'AliyunOSSiOS', '2.10.7'
 pod 'CocoaAsyncSocket', '7.6.0'
 pod 'ReachabilitySwift', '4.1.0'
 pod 'AFNetworking', '2.6.3'
 pod 'MQTTClient', '0.14.0'
 pod 'Alamofire', '4.7.3'
 ```
-
-Mobile SDK 还需要导入其他依赖库，请下载后手动导入到工程里。
-
-[下载依赖库](https://github.com/Rokid/RokidMobileSDKiOSDemo/tree/master/RokidSDK)
-
 
 ## 3、导入 SDK
 

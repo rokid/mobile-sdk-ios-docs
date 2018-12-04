@@ -3,7 +3,7 @@
 ** 1、引入 Mobile SDK **
 
 ```
-pod 'RokidSDK', '~> 1.3.0'
+pod 'RokidSDK', '~> 1.6.0'
 ```
 
 ** 2、引入头文件 **
@@ -21,12 +21,7 @@ source 'https://github.com/aliyun/aliyun-specs.git'
 
 ...
 
-pod 'AliyunOSSiOS', '2.1.2'
+pod 'AliyunOSSiOS', '2.10.7'
 ```
-** 4、手动导入其他依赖库 **
-
-Mobile SDK 还需要导入其他依赖库，请下载后手动导入到工程里。
-
-[下载依赖库](https://github.com/Rokid/RokidMobileSDKiOSDemo/tree/master/RokidSDK)
 
 
