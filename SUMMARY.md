@@ -40,13 +40,15 @@
     * [云提醒](res/skill/cloud_remind.md)
     * [智能家居](res/skill/homebase.md)
     * [技能商店](res/skill/skill_store.md)
+* 媒体模块 Media
+    * [授权媒体技能](res/skill/media_skilllist.md)
+    * [媒体技能页面](res/skill/media_display.md)
+    * [媒体技能播控](res/skillmedia_control.md)
+    * [第三方授权](res/skill/media_thridauth.md)
+        * [QQ & 微信](res/skill/media_thrid_qq.md)
+        * [喜马拉雅](res/skill/media_thrid_xmly.md)
 * WebBridge
     * [快速接入](res/71_use_webbridge.md)
-* 媒体模块
-    * [授权媒体技能](res/91_media_skilllist.md)
-    * [媒体技能页面](res/92_media_display.md)
-    * [媒体技能播控](res/93_media_control.md)
-    * [第三方授权](res/94_media_thridauth.md)
 * Vui 反馈 模块
     * [Card 列表](res/81_card_list.md)
     * [发送 ASR及纠错](res/84_asr.md)

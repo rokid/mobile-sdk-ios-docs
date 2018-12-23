@@ -14,7 +14,7 @@ Rokid Mobile SDK 提供了整套的移动开发支持，能让开发者的移动
 
 ## 接入流程
 
-![](resource/images/mobileSdkFlow.png)
+![](res/media/mobileSdkFlow.png)
 
 #### 1、申请开发者
 

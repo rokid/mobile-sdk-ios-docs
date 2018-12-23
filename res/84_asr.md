@@ -4,7 +4,7 @@
 
 ## 流程
 
-![](images/vui_asr.png)
+![](media/vui_asr.png)
 
 ## 接口
 

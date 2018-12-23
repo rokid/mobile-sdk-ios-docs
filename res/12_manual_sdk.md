@@ -41,12 +41,12 @@ pod 'Alamofire', '4.7.3'
 3. 在 Embedded Binaries 中点击 +，选择 RokidSDK.framework，点击确定。
 
 4. 使用第3部的方法将依赖的第三方库依次加入。
-![](images/manual_import_1.jpg)
+![](media/manual_import_1.jpg)
 
 5. 检查 setting 中的 framework search path 是否将添加的 framework 路径都包含了，缺少的加上。如果不确定，则在3、4步中添加framework时，选中 Copy item if needed，将 framework 添加到工程根目录下。
-![](images/manual_import_2.jpg)
+![](media/manual_import_2.jpg)
 
 6. 在 setting 中打开 swift 标准库（Always Embed Swift Standard Libraries）
-![](images/manual_import_3.jpg)
+![](media/manual_import_3.jpg)
 
 

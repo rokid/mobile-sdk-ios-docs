@@ -2,7 +2,7 @@
 
 ## 流程
 
-![](images/event.png)
+![](media/event.png)
 
 ## 接口
 
