@@ -44,7 +44,7 @@
 * 媒体模块 Media
     * [授权媒体技能](res/skill/media_skilllist.md)
     * [媒体技能页面](res/skill/media_display.md)
-    * [媒体技能播控](res/skillmedia_control.md)
+    * [媒体技能播控](res/skill/media_control.md)
     * [第三方授权](res/skill/media_thridauth.md)
         * [QQ & 微信](res/skill/media_thrid_qq.md)
         * [喜马拉雅](res/skill/media_thrid_xmly.md)
