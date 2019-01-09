@@ -1,15 +1,10 @@
 #  版本更新详情
-<<<<<<< Updated upstream
- 
- * v1.6.5
-=======
 
 * v1.6.6
 
     [修改] 获取云闹钟列表接口<br>
 
 * v1.6.5
->>>>>>> Stashed changes
 
     [新增] 设备模块 - SDKDevice增加ssid（当前设备连接wifi）<br>
     [新增] 设备模块 - 增加获取YodaOS系统设备在线状态接口<br>
