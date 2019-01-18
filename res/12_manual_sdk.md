@@ -49,4 +49,9 @@ pod 'Alamofire', '4.7.3'
 6. 在 setting 中打开 swift 标准库（Always Embed Swift Standard Libraries）
 ![](media/manual_import_3.jpg)
 
+7. 如果 pod install 之后打开项目编译报如图的错误。
+![](media/build_error_swift_version.png)
 
+    需要选中 Pods 工程， 找到对应的 target，例如 `Alamofire`，然后选中 **Build Settings**，设置一个明确的 **Swift Language Version**，推荐设置 `Swift 4`。操作如图所示。
+
+    ![](media/build_error_correct.png)
