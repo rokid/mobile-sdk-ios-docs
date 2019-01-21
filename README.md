@@ -22,7 +22,7 @@ Rokid Mobile SDK 提供了整套的移动开发支持，能让开发者的移动
 
 #### 2、集成 Mobile SDK
 
-[Mobile SDK 集成说明](/resource/10_use_sdk.html)
+[Mobile SDK 集成说明](/res/11_pod_sdk.md)
 
 #### 3、开发调试
 
