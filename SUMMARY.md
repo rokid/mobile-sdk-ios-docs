@@ -52,6 +52,7 @@
     * [快速接入](res/71_use_webbridge.md)
 * Vui 反馈 模块
     * [Card 列表](res/81_card_list.md)
+    * [Card 样式说明](res/83_card_style.md)
     * [发送 ASR及纠错](res/84_asr.md)
     * [发送 TTS](res/85_tts.md)
     * [发送 TOPIC](res/86_topic.md)
