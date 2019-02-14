@@ -23,11 +23,17 @@
 Swift:
 
 ```swift
-// complete: 初始化结果，成功success = true, 失败success = false
 RokidMobileSDK.shared.initSDK(appKey: String,
                               appSecret: String,
                               accessKey: String,
-                              escaping complete:(success: Bool) -> Void)
+                              complete: {(error: RKError) in 
+                                         
+                                         // SDK init 完成
+                                         if (error != nil) {
+                                             // ...
+                                         };  
+                                        
+  })
 ```
 
 Objc:
@@ -36,7 +42,7 @@ Objc:
 [RokidMobileSDK.shared initSDKWithAppKey:"xxx"
                                    appSecret:"xxx"
                                    accessKey:"xxx"
-                                  completion:^(RKError * error) {
+                                   completion:^(RKError * error) {
         NSLog(@"[SDK init] result = %@", error);
         
         // SDK init 完成

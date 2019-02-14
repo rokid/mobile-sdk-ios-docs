@@ -1059,17 +1059,23 @@
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p>Swift:</p>
-<pre><code class="lang-swift"><span class="hljs-comment">// complete: &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x679C;&#xFF0C;&#x6210;&#x529F;success = true, &#x5931;&#x8D25;success = false</span>
-<span class="hljs-type">RokidMobileSDK</span>.shared.initSDK(appKey: <span class="hljs-type">String</span>,
+<pre><code class="lang-swift"><span class="hljs-type">RokidMobileSDK</span>.shared.initSDK(appKey: <span class="hljs-type">String</span>,
                               appSecret: <span class="hljs-type">String</span>,
                               accessKey: <span class="hljs-type">String</span>,
-                              escaping complete:(success: <span class="hljs-type">Bool</span>) -&gt; <span class="hljs-type">Void</span>)
+                              complete: {(error: <span class="hljs-type">RKError</span>) <span class="hljs-keyword">in</span> 
+
+                                         <span class="hljs-comment">// SDK init &#x5B8C;&#x6210;</span>
+                                         <span class="hljs-keyword">if</span> (error != <span class="hljs-literal">nil</span>) {
+                                             <span class="hljs-comment">// ...</span>
+                                         };  
+
+  })
 </code></pre>
 <p>Objc:</p>
 <pre><code class="lang-objc">[RokidMobileSDK.shared initSDKWithAppKey:<span class="hljs-string">&quot;xxx&quot;</span>
                                    appSecret:<span class="hljs-string">&quot;xxx&quot;</span>
                                    accessKey:<span class="hljs-string">&quot;xxx&quot;</span>
-                                  completion:^(RKError * error) {
+                                   completion:^(RKError * error) {
         <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;[SDK init] result = %@&quot;</span>, error);
 
         <span class="hljs-comment">// SDK init &#x5B8C;&#x6210;</span>
@@ -1122,7 +1128,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SDK 初始化","level":"1.3.3","depth":2,"next":{"title":"调试","level":"1.3.4","depth":2,"path":"res/14_debug.md","ref":"res/14_debug.md","articles":[]},"previous":{"title":"手动导入","level":"1.3.2","depth":2,"path":"res/12_manual_sdk.md","ref":"res/12_manual_sdk.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/13_sdk_init.md","mtime":"2018-09-30T09:55:35.089Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-25T08:44:02.182Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SDK 初始化","level":"1.3.3","depth":2,"next":{"title":"调试","level":"1.3.4","depth":2,"path":"res/14_debug.md","ref":"res/14_debug.md","articles":[]},"previous":{"title":"手动导入","level":"1.3.2","depth":2,"path":"res/12_manual_sdk.md","ref":"res/12_manual_sdk.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/13_sdk_init.md","mtime":"2019-02-14T06:03:09.417Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T06:03:40.174Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
