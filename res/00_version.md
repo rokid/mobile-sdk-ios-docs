@@ -1,5 +1,11 @@
 #  版本更新详情
 
+* v1.7.0
+
+    [更新] 修复 一些 bug<br>
+    [更新] 增强 SDK 稳定性<br>
+    [修改] 删除一些 无效的文件<br>
+
 * v1.6.6
 
     [修改] 获取云闹钟列表接口<br>
@@ -49,25 +55,25 @@
     [修改] Account token login
 
 * v1.0.7 
-    
+
     [新增] Web Bridge 接入说明
 
 * v1.0.6
-    
+
     [新增] 闹钟、提醒 skill 接口
 
 * v1.0.5
-    
+
     [修改] 增加asr纠错接口<br>
     [修改] pod中引入 'ReachabilitySwift'
 
 * v1.0.4
-    
+
     [修改] 统一 SDK 前缀。<br>
     [修改] home -> vui
 
 * v1.0.3
-    
+
     [新增] WebBridge 的 PhoneDelegate H5 touch 事件。
 
 * v1.0.2
