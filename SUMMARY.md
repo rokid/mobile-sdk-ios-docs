@@ -4,7 +4,6 @@
 * [修订记录](res/00_version.md)
 * 快速接入
     * [Pod引入](res/11_pod_sdk.md)
-    * [手动导入](res/12_manual_sdk.md)
     * [SDK 初始化](res/13_sdk_init.md)
     * [调试](res/14_debug.md)
     * [Demo 工程](res/1Z_demo.md)

@@ -3,7 +3,7 @@
 ** 1、引入 Mobile SDK **
 
 ```
-pod 'RokidSDK', '~> 1.7.0'
+pod 'RokidSDK', '~> 1.7.4'
 ```
 
 ** 2、引入头文件 **
