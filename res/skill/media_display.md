@@ -2,7 +2,7 @@
 
 ## Skill首页
  请求参数：
- 
+
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | skillId | String | 是 | 技能ID |
@@ -75,11 +75,12 @@ MediaHomeV3Data具体格式如下：
 
 ## 专辑列表页
  请求参数：
- 
+
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | skillId | String | 是 | 当前技能ID |
 | groupId | String | 是 | 当前专辑ID |
+| linkUrl | String | 否 | linkUrl |
 | startIndex | int | 否 | 分页使用 |
 | endIndex | int | 否 | 分页使用 |
 | extend | String | 否 | 拓展字段 |
@@ -132,7 +133,7 @@ MediaListV3Data具体格式如下：
 ## 专辑详情页
 
  请求参数：
- 
+
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | skillId | String | 是 | 当前技能ID |
