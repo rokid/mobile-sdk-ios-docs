@@ -1,4 +1,9 @@
 #  版本更新详情
+* v1.9.0
+
+    [修改] 媒体模块 - `RokidMobileSDK.media.requestListIntent`接口增加`linkUrl`参数<br>
+    [新增] `SDK`初始化增加对`appKey`、`appSecret`、`accessKey`的校验逻辑<br>
+    [新增] 媒体模块 - 增加酷狗登录H5支持<br>
 
 
 * v1.8.0
