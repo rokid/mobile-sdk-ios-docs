@@ -9,7 +9,7 @@
 * 时序图
 
 
-![酷狗音乐登录](![third_kugou](media/third_kugou_h5.png))
+![酷狗音乐登录](media/third_kugou_h5.png)
 
 
 
@@ -17,11 +17,11 @@
 
 * 集成RokidSDK
 
-  集成文档：[https://rokid.github.io/mobile-sdk-ios-docs/res/11_pod_sdk.html]
+  集成文档：<https://rokid.github.io/mobile-sdk-ios-docs/res/11_pod_sdk.html>
 
 * 集成酷狗音乐SDK
 
-  酷狗SDK framework和文档地址：[<https://github.com/Rokid/RokidMobileSDKiOSDemo/tree/master/Third/KuGou>]
+  酷狗SDK framework和文档地址：<https://github.com/Rokid/RokidMobileSDKiOSDemo/tree/master/Third/KuGou>
 
 * 酷狗音乐授权H5页面接入
 
@@ -31,67 +31,67 @@
 
   ​	a. 导入RokidSDK
 
-  ~~~objective-c
-  #import <RokidSDK/RokidSDK.h>
-  ~~~
+~~~objective-c
+#import <RokidSDK/RokidSDK.h>
+~~~
 
   ​	b. 注入Bridge,设置delegate
 
   ​	OC demo：
 
-  ~~~objective-c
-  @interface WebviewViewController () <RKBridgeModuleViewDelegate>
+~~~objective-c
+@interface WebviewViewController () <RKBridgeModuleViewDelegate>
+
+@property (strong, nonatomic) WKWebView *webView;
+@property (weak, nonatomic) RKWebBridge *webbridge;
+
+@end
+
+@implementation WebviewViewController
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  // Do any additional setup after loading the view.
   
-  @property (strong, nonatomic) WKWebView *webView;
-  @property (weak, nonatomic) RKWebBridge *webbridge;
+  self.webView = [[WKWebView alloc] init];
   
-  @end
+  // 注入RKWebBridge
+  self.webbridge = [RKWebBridge injectWebBridgeTo:self.webView];
   
-  @implementation WebviewViewController
+  // 设置 RKBridgeModuleViewDelegate，用于实现 Native UI 的功能
+  [self.webbridge setViewDelegateWithDelegate: self];
   
-  - (void)viewDidLoad {
-      [super viewDidLoad];
-      // Do any additional setup after loading the view.
-      
-      self.webView = [[WKWebView alloc] init];
-      
-      // 注入RKWebBridge
-      self.webbridge = [RKWebBridge injectWebBridgeTo:self.webView];
-      
-      // 设置 RKBridgeModuleViewDelegate，用于实现 Native UI 的功能
-      [self.webbridge setViewDelegateWithDelegate: self];
-      
-      [self.view addSubview:self.webView];
-      self.webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-      
-      NSURL *url = [NSURL URLWithString: self.urlStr];
-      //NSURL *url =[NSBundle.mainBundle URLForResource:@"test" withExtension:@"html"];
-      
-      NSURLRequest* request = [NSURLRequest requestWithURL:url];
-      [self.webView loadRequest:request];
-  }
+  [self.view addSubview:self.webView];
+  self.webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
   
+  NSURL *url = [NSURL URLWithString: self.urlStr];
+  //NSURL *url =[NSBundle.mainBundle URLForResource:@"test" withExtension:@"html"];
   
-  ~~~
+  NSURLRequest* request = [NSURLRequest requestWithURL:url];
+  [self.webView loadRequest:request];
+}
+
+  
+~~~
 
   ​	c. delegate回调，UI层，如需要就去实现delegate
 
-  ~~~objective-c
-  //WebViewUIDelegate UI层的回调
-  - (void)showBridgeLoading {
-      NSLog(@"start showLoading");
-  }
+~~~objective-c
+//WebViewUIDelegate UI层的回调
+- (void)showBridgeLoading {
+  NSLog(@"start showLoading");
+}
+
+- (void)hideBridgeLoading {
+  NSLog(@"start hideLoading");
+}
+/// 展示toast信息
+- (void)showToastWithMessage:(NSString * _Nonnull)message {
+  NSLog(@"%@", message);
+}
   
-  - (void)hideBridgeLoading {
-      NSLog(@"start hideLoading");
-  }
-  /// 展示toast信息
-  - (void)showToastWithMessage:(NSString * _Nonnull)message {
-      NSLog(@"%@", message);
-  }
   
-  
-  ~~~
+~~~
 
 
 
