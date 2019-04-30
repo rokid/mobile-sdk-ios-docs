@@ -1,8 +1,15 @@
 #  版本更新详情
+
+* v1.9.1
+
+    [新增] 配网时，设备蓝牙连上后，回调 设备信息，比如 sn
+    
+    [删除] 一些不必要的 log 输出
+
+
 * v1.9.0
 
     [修改] 媒体模块 - `RokidMobileSDK.media.requestListIntent`接口增加`linkUrl`参数<br>
-    [新增] `SDK`初始化增加对`appKey`、`appSecret`、`accessKey`的校验逻辑<br>
     [新增] 媒体模块 - 增加酷狗登录H5支持<br>
 
 

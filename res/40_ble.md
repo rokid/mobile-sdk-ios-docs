@@ -47,6 +47,10 @@ public class CustomBinder: SDKBinderObserver {
     /// 断开设备连接
     func onBLEDeviceDisconnected(device: RKBLEDevice) {
     }
+  
+    /// 设备信息，比如 设备 sn 信息更新，response 的 sn 有值。
+    func onBLEDeviceInfoUpdated(device: RKBLEDevice, response: RKBLEResponse) {
+    }
     
     /// 设备Wi-Fi列表更新
     func onBLEDeviceWiFiListUpdated(device: RKBLEDevice, response: RKBLEResponse) {

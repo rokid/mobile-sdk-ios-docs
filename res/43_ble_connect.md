@@ -27,3 +27,28 @@ Objc:
 
 ---
 
+## 断开设备
+
+**接口说明** 
+用于断开已经连接的设备。
+
+**参数说明**
+
+| 字段    | 类型   | 必须？| 说明 |
+| ------ | ----- | ----- | ----- |
+| device | RKBLEDevice | 是 | 蓝牙设备 |
+
+**示例代码**
+
+Swift:
+
+```swift
+RokidMobileSDK.binder.disconnect(device: RKBLEDevice)
+```
+
+Objc:
+
+```objc
+[RokidMobileSDK.binder disconnect:device];
+```
+
