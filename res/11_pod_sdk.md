@@ -47,8 +47,12 @@ pod 'AliyunOSSiOS', '2.10.7'
 
 ```
 
-其中 **pod 'ReachabilitySwift', '4.1.0'** 这个版本编译没问题，但运行时会 crash，类型于找个 [#308 issues](https://github.com/ashleymills/Reachability.swift/issues/308)
+其中 **pod 'ReachabilitySwift', '4.1.0'** 这个版本编译没问题，但运行时会 crash，类似于找个 [#308 issues](https://github.com/ashleymills/Reachability.swift/issues/308)
 
 ![如图](media/reachability_run_error.png)
 
 ### **所以如果你要指定依赖的版本的话，建议使用较新的版本。**
+
+#### 3. Alamofire 运行时报错
+
+建议使用 **pod 'Alamofire', '4.8.2'** 的版本，也是 **4.x** 最后的稳定版本。**5.x beta 版** 它是 **deployment target iOS 10.0**  以上（包括 10.0），而我们SDK是在 **deployment target iOS 8.0** 下开发的，**Alamofire** 最新新的版本用到的系统 **API** 在 iOS 8.0-iOS 9.0 上不可用，会造成运行时crash。**所以建议使用**pod 'Alamofire', '4.8.2'** 的版本。**
