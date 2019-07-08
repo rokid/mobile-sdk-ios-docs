@@ -215,7 +215,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="31_rokid_login.html">
+        <li class="chapter " data-level="1.4.2" data-path="account/register_flow.html">
+            
+                <a href="account/register_flow.html">
+            
+                    
+                    若琪账号体系-注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="account/account_password.html">
+            
+                <a href="account/account_password.html">
+            
+                    
+                    若琪账号体系-密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="31_rokid_login.html">
             
                 <a href="31_rokid_login.html">
             
@@ -228,7 +254,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="32_thirdparty_login.html">
+        <li class="chapter " data-level="1.4.5" data-path="32_thirdparty_login.html">
             
                 <a href="32_thirdparty_login.html">
             
@@ -241,7 +267,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="33_logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="33_logout.html">
             
                 <a href="33_logout.html">
             
@@ -254,7 +280,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.5" data-path="34_account_info.html">
+        <li class="chapter active" data-level="1.4.7" data-path="34_account_info.html">
             
                 <a href="34_account_info.html">
             
@@ -1028,7 +1054,88 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5E10;&#x53F7;&#x4FE1;&#x606F;-account-info">&#x5E10;&#x53F7;&#x4FE1;&#x606F; Account Info</h1>
+                                <h1 id="&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</h1>
+<p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
+<pre><code class="lang-objc">[RokidMobileSDK.account fetchUserInfoWithCompletion:^(RKError * error, SDKUserInfo * userInfo) {
+        <span class="hljs-keyword">if</span> (error == <span class="hljs-literal">nil</span>) {
+            <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;user info nickname = %@, birth = %@, gender = %@, userId = %@&quot;</span>, userInfo.nickname, userInfo.birthday, userInfo.gender, userInfo.userId);
+        }
+}];
+</code></pre>
+<h2 id="sdkuserinfo">SDKUserInfo</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>birthday</td>
+<td>String</td>
+<td>&#x751F;&#x65E5; &#x201C;2019/07/08&#x201D;</td>
+</tr>
+<tr>
+<td>userId</td>
+<td>String</td>
+<td>&#x7528;&#x6237; id</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6027;&#x522B; &#x5982;&#xFF1A;&#x201C;male&#x201D; &#x201D;female&#x201C;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x66F4;&#x65B0;&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x66F4;&#x65B0;&#x7528;&#x6237;&#x4FE1;&#x606F;</h1>
+<p><strong>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</strong></p>
+<pre><code class="lang-objc">[RokidMobileSDK.account updateUserInfoWithNickname:<span class="hljs-string">@&quot;rokiddemo&quot;</span>
+                                                gender:<span class="hljs-string">@&quot;male&quot;</span>
+                                              birthday:<span class="hljs-string">@&quot;2014/11/26&quot;</span>
+                                            completion:^(RKError * error) {
+                                                <span class="hljs-keyword">if</span> (error == <span class="hljs-literal">nil</span>) {
+
+                                                }
+                                            }];
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nickname</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7528;&#x6237;&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7528;&#x6237;&#x6027;&#x522B; &#x5982;&#xFF1A;&#x201C;male&#x201D; &#x201D;female&#x201C;</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x751F;&#x65E5; &#x5982;&#xFF1A;&#x201C;2019/07/08&#x201D;</td>
+</tr>
+</tbody>
+</table>
 <h2 id="token">Token</h2>
 <p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x767B;&#x5F55;&#x7684; Token</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
@@ -1086,7 +1193,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"帐号信息","level":"1.4.5","depth":2,"next":{"title":"绑定模块 Binder","level":"1.5","depth":1,"ref":"","articles":[{"title":"绑定模块介绍","level":"1.5.1","depth":2,"path":"res/40_ble.md","ref":"res/40_ble.md","articles":[]},{"title":"手机蓝牙状态","level":"1.5.2","depth":2,"path":"res/41_ble_status.md","ref":"res/41_ble_status.md","articles":[]},{"title":"设备蓝牙扫描","level":"1.5.3","depth":2,"path":"res/42_ble_scan.md","ref":"res/42_ble_scan.md","articles":[]},{"title":"连接设备蓝牙","level":"1.5.4","depth":2,"path":"res/43_ble_connect.md","ref":"res/43_ble_connect.md","articles":[]},{"title":"设备配网","level":"1.5.5","depth":2,"path":"res/44_ble_send_data.md","ref":"res/44_ble_send_data.md","articles":[]}]},"previous":{"title":"账号登出","level":"1.4.4","depth":2,"path":"res/33_logout.md","ref":"res/33_logout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/34_account_info.md","mtime":"2019-01-07T12:43:32.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-28T04:52:02.858Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"帐号信息","level":"1.4.7","depth":2,"next":{"title":"绑定模块 Binder","level":"1.5","depth":1,"ref":"","articles":[{"title":"绑定模块介绍","level":"1.5.1","depth":2,"path":"res/40_ble.md","ref":"res/40_ble.md","articles":[]},{"title":"手机蓝牙状态","level":"1.5.2","depth":2,"path":"res/41_ble_status.md","ref":"res/41_ble_status.md","articles":[]},{"title":"设备蓝牙扫描","level":"1.5.3","depth":2,"path":"res/42_ble_scan.md","ref":"res/42_ble_scan.md","articles":[]},{"title":"连接设备蓝牙","level":"1.5.4","depth":2,"path":"res/43_ble_connect.md","ref":"res/43_ble_connect.md","articles":[]},{"title":"设备配网","level":"1.5.5","depth":2,"path":"res/44_ble_send_data.md","ref":"res/44_ble_send_data.md","articles":[]}]},"previous":{"title":"账号登出","level":"1.4.6","depth":2,"path":"res/33_logout.md","ref":"res/33_logout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/34_account_info.md","mtime":"2019-07-08T10:01:42.318Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-08T10:04:35.947Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

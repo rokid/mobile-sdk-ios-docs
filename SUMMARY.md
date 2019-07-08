@@ -9,6 +9,8 @@
     * [Demo 工程](res/1Z_demo.md)
 * 帐号模块 Account
     * [账号模块介绍](res/30_account.md)
+    * [若琪账号体系-注册](res/account/register_flow.md)
+    * [若琪账号体系-密码](res/account/account_password.md)
     * [若琪账号体系](res/31_rokid_login.md)
     * [自有账号体系](res/32_thirdparty_login.md)
     * [账号登出](res/33_logout.md)
