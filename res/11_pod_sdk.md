@@ -19,7 +19,7 @@ pod 'RokidSDK', '~> 1.9.3'
 ```
 source 'https://github.com/aliyun/aliyun-specs.git'
 
-pod 'RokidSDK', '~> 1.9.3'
+pod 'RokidSDK', '~> 1.10.0'
 pod 'AliyunOSSiOS', '2.10.7'
 
 ```
