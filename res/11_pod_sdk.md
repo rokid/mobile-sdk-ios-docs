@@ -3,7 +3,7 @@
 **1、引入 Mobile SDK**
 
 ```
-pod 'RokidSDK', '~> 1.10.1'
+pod 'RokidSDK', '~> 1.10.2'
 ```
 
 **2、引入头文件**
@@ -17,10 +17,9 @@ pod 'RokidSDK', '~> 1.10.1'
 在 Podfile 中添加如下配置
 
 ```
-source 'https://github.com/aliyun/aliyun-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'RokidSDK', '~> 1.10.1'
-pod 'AliyunOSSiOS', '2.10.7'
+pod 'RokidSDK', '~> 1.10.2'
 ```
 
 ### <font color=#ff0000>注意</font>

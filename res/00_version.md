@@ -1,5 +1,9 @@
 #  版本更新详情
 
+* v1.10.2
+
+    [删除] `AliyunOSSiOS` 相关依赖
+
 * v1.10.1
 
     [修改] OC 版本的 `Reachability` 和 Swift 版本的 `ReachabilitySwift` 冲突问题
